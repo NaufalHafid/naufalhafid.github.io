@@ -6,8 +6,17 @@
 body {
     font-size: 1.2rem;
     font-family: 'Roboto', sans-serif;
-    /* min-height: 4000px; */
-    /* background-color: ; */
+    min-height: 4000px;
+    /* background-color: #666; */
+}
+
+.about .hr{
+    visibility: visible;
+    margin: 0 auto;
+    width: 50%;
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(0, 0, 0, 2), rgba(255, 255, 255, 0));
 }
 
 .about,
@@ -25,6 +34,10 @@ body {
 .contact p {
     font-size: 1rem;
     font-weight: 300;
+}
+
+.description{
+    padding-top: 0.9rem;
 }
 
 .navbar .card{
@@ -77,13 +90,40 @@ body {
     font-size: 3rem;
 }
 
-.gome h4 {
+.home h4 {
     font-size: 1.5rem;
     padding-top: 1rem;
 }
 
 .home p {
     font-size: 1.4rem;
+}
+
+.about a{
+    font-size: 0.79rem;
+}
+
+.gallery{
+    background-color: var(--bg);
+    color: white;
+}
+
+.gallery .hr{
+    visibility: visible;
+    margin: 0 auto;
+    width: 50%;
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgb(255, 255, 255, 1), rgba(255, 255, 255, 0));
+}
+
+.projects .hr{
+    visibility: visible;
+    margin: 0 auto;
+    width: 50%;
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(0, 0, 0, 2), rgba(255, 255, 255, 0));
 }
 
 
@@ -118,5 +158,9 @@ body {
     }
     .navbar{
         width: 90%;
+    }
+    .line{
+        font-size: 2rem;
+        
     }
 }
