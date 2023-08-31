@@ -103,6 +103,10 @@ body {
     font-size: 0.79rem;
 }
 
+.about .card {
+    box-shadow: var(--shadow);
+}
+
 .gallery{
     background-color: var(--bg);
     color: white;
