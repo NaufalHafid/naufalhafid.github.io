@@ -1,4 +1,4 @@
-:root{
+:root {
     --shadow: 0 2px 2px rgb(0 0 0 /0.5);
     --bg: #273036;
 }
@@ -6,17 +6,8 @@
 body {
     font-size: 1.2rem;
     font-family: 'Roboto', sans-serif;
-    min-height: 4000px;
+    min-height: 5000px;
     /* background-color: #666; */
-}
-
-.about .hr{
-    visibility: visible;
-    margin: 0 auto;
-    width: 50%;
-    border: 0;
-    height: 1px;
-    background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(0, 0, 0, 2), rgba(255, 255, 255, 0));
 }
 
 .about,
@@ -27,7 +18,6 @@ body {
     padding-bottom: 8rem;
 }
 
-
 .about p,
 .gallery p,
 .projects p,
@@ -36,11 +26,31 @@ body {
     font-weight: 300;
 }
 
-.description{
+.about .hr,
+.projects .hr {
+    visibility: visible;
+    margin: 0 auto;
+    width: 50%;
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(0, 0, 0, 2), rgba(255, 255, 255, 0));
+}
+
+.gallery .hr,
+.contact .hr {
+    visibility: visible;
+    margin: 0 auto;
+    width: 50%;
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgb(255, 255, 255, 1), rgba(255, 255, 255, 0));
+}
+
+.description {
     padding-top: 0.9rem;
 }
 
-.navbar .card{
+.navbar .card {
     backdrop-filter: blur(4px);
     width: 100%;
     box-shadow: var(--shadow);
@@ -48,12 +58,13 @@ body {
     /* height: 6rem; */
 }
 
-.navbar .card a{
+.navbar .card a {
     font-weight: bold;
     color: var(--bg);
     text-shadow: var(--shadow);
 }
-.navbar .card a:hover{
+
+.navbar .card a:hover {
     font-weight: bold;
     color: black;
     text-shadow: var(--shadow);
@@ -99,7 +110,7 @@ body {
     font-size: 1.4rem;
 }
 
-.about a{
+.about a {
     font-size: 0.79rem;
 }
 
@@ -107,35 +118,19 @@ body {
     box-shadow: var(--shadow);
 }
 
-.gallery{
+.gallery,
+.contact {
     background-color: var(--bg);
     color: white;
 }
 
-.gallery .hr{
-    visibility: visible;
-    margin: 0 auto;
-    width: 50%;
-    border: 0;
-    height: 1px;
-    background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgb(255, 255, 255, 1), rgba(255, 255, 255, 0));
-}
-
-.projects .hr{
-    visibility: visible;
-    margin: 0 auto;
-    width: 50%;
-    border: 0;
-    height: 1px;
-    background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(0, 0, 0, 2), rgba(255, 255, 255, 0));
-}
 
 
 
 
-@media (max-width: 1200px) {
- 
-}
+
+
+@media (max-width: 1200px) {}
 
 /* laptop */
 @media (max-width: 992px) {
@@ -143,7 +138,7 @@ body {
         font-size: 75%;
     }
 
-    
+
 }
 
 /* Tablet */
@@ -152,7 +147,7 @@ body {
         font-size: 65%;
     }
 
-    
+
 }
 
 /* Mobile Phone */
@@ -160,11 +155,13 @@ body {
     html {
         font-size: 50%;
     }
-    .navbar{
+
+    .navbar {
         width: 90%;
     }
-    .line{
+
+    .line {
         font-size: 2rem;
-        
+
     }
 }
