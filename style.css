@@ -136,15 +136,15 @@ body {
     border-radius: 0px 25px;
 }
 
-.list-group {
+/* .list-group {
     border-radius: 10px;
-}
+} */
 
 .about .card,
 .projects .card,
 .social .card {
     box-shadow: var(--shadow);
-    border-radius: 10px 25px;
+    /* border-radius: 10px 25px; */
 }
 
 .gallery,
