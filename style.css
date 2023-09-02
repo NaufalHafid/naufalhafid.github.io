@@ -14,6 +14,7 @@ body {
     background-size:1500px; */
     /* background-position: center; */
     /* background-repeat: no-repeat; */
+
 }
 
 .about,
@@ -122,11 +123,28 @@ body {
     font-size: 0.79rem;
 }
 
+.home .profile {
+    margin-top: 0px;
+}
+
+.home .profile h3 {
+    font-size: 2.4rem;
+}
+
+.home .profile img {
+    width: 10rem;
+    border-radius: 0px 25px;
+}
+
+.list-group {
+    border-radius: 10px;
+}
+
 .about .card,
 .projects .card,
 .social .card {
     box-shadow: var(--shadow);
-    border-radius: 10px ;
+    border-radius: 10px 25px;
 }
 
 .gallery,
@@ -137,7 +155,7 @@ body {
 
 
 .gallery img {
-    border-radius: 10px 100px;
+    border-radius: 0px 100px;
     position: relative;
     width: 100%;
     height: 100%;
@@ -158,21 +176,27 @@ body {
     transition: all 0.3s cubic-bezier(0.3, 0.1, 0.3, 0.85);
 }
 
-footer,
+.footer {
+    padding-bottom: 10rem;
+}
+
 footer a,
 footer p {
     background-color: none;
     color: var(--bg);
     text-decoration: none;
     /* font-weight: bold; */
-    padding-bottom: 7rem;
-    font-family: 'Work sans', sans-serif;
+    font-size: small;
+    font-family: 'Roboto', sans-serif;
+}
+
+.card .list-group-item:hover {
+    color: white;
+    background-color: var(--bg);
 }
 
 
-@media (max-width: 1200px) {
-    
-}
+@media (max-width: 1200px) {}
 
 /* laptop */
 @media (max-width: 992px) {
@@ -204,7 +228,7 @@ footer p {
 
     .gallery .col {
         /* position: center; */
-    /* height: 100%; */
+        /* height: 100%; */
         width: 80%;
     }
 

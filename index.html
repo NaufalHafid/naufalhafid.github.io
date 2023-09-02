@@ -15,6 +15,9 @@
     <!-- css -->
     <link rel="stylesheet" href="style.css">
 
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
     <!-- font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -27,7 +30,7 @@
 
 
 
-    <div class="navbar container fixed-bottom pb-5">
+    <div class="navbar container fixed-bottom pb-5" data-aos="fade-up">
         <div class="card text-center ">
             <div class="card-body">
                 <ul class="nav justify-content-center">
@@ -70,9 +73,17 @@
     <section id="home"
         class="home w-100 h-100 p-3 mx-auto text-center d-flex justify-content-center align-items-center text-white">
         <main>
-
-            <h2>Naufal Hafid Mardhatillah</h2>
-            <p>Web Dev || Frontend Dev</p>
+            <div class=" col-lg-12">
+                <div class="row profile">
+                    <div class="col-7 text-end" data-aos="fade-right" data-aos-duration="2000">
+                        <h2>Naufal Hafid Mardhatillah</h2>
+                        <p>Web Dev || Frontend Dev</p>
+                    </div>
+                    <div class="col-3" data-aos="zoom-in" data-aos-duration="2000">
+                        <img data-aos="fade-right" src="img/thumbnail/1.jpg" alt="Naufal Hafid Mardhatillah" class="">
+                    </div>
+                </div>
+            </div>
         </main>
     </section>
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
@@ -87,28 +98,47 @@
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-md-12 col-10 text-center pt-2 ">
-                    <h2>ABOUT</h2>
+                    <h2 data-aos="fade-down" data-aos-duration="2000">ABOUT</h2>
                     <hr class="hr">
-                    <p class="description">Perjalanan dan riwayat hidup</p>
+                    <p class="description" data-aos="fade-up" data-aos-duration="2000">Perjalanan dan riwayat hidup</p>
                 </div>
             </div>
 
             <div class="row  mt-4 justify-content-center">
-                <div class="col-md-5 pt-3">
-                    <div class="card text-start col-12 ">
+                <div class="col-md-6 pt-3">
+                    <div class="card text-start col-12" data-aos="fade-right" data-aos-offset="300" data-aos-delay="0"
+                        data-aos-duration="2000">
                         <div class="card-body">
                             <h4 class="card-title">Latar Belakang
                                 <hr>
                             </h4>
-                            <p class="card-text">Seorang anak ke-2 dari 3 bersaudara. <br> Dilahirkan dari keluarga
-                                menengah kebawah
-                                yang membuat saya menjadi lebih mandiri</p>
+                            <p class="card-text">Halo, perkenalkan, saya Naufal Hafid Mardhatillah, seorang lulusan
+                                Rekayasa Perangkat Lunak (RPL). Saat ini saya sedang melanjutkan kuliah di program studi
+                                Sistem Informasi untuk memperdalam pengetahuan dan keterampilan saya di bidang teknologi
+                                informasi.
+                                <br>
+                                Sebagai lulusan RPL, saya memiliki dasar yang kuat dalam pemrograman dan pengembangan
+                                perangkat lunak. Saya telah belajar bahasa pemrograman C/C++ dan juga Basic web yaitu
+                                HTML, CSS, sedikit tentang JS.
+                                Saya juga memiliki pengalaman dalam mengembangkan aplikasi berbasis web.
+                                <br>
+                                Saat ini, saya sedang berfokus untuk mengembangkan pengetahuan saya dalam bidang sistem
+                                informasi. Saya belajar tentang manajemen basis data, analisis sistem, serta manajemen
+                                proyek TI. Saya berharap, dengan pengetahuan yang saya dapatkan dari kuliah, saya dapat
+                                membantu perusahaan dalam meningkatkan kinerja dan efisiensi sistem informasi mereka.
+                                <br>
+                                Saya percaya bahwa kemampuan dan pengalaman saya di bidang teknologi informasi dapat
+                                memberikan nilai tambah bagi perusahaan di masa depan. Saya berkomitmen untuk terus
+                                belajar dan beradaptasi dengan perkembangan teknologi informasi yang terus berkembang.
+                                Terima kasih.
+                            </p>
                         </div>
                     </div>
                 </div>
 
-                <div class="col-md-5 pt-3">
-                    <div class="card text-start col-12 ">
+                <div class="col-md-6 pt-3">
+                    <div class="card text-start col-12 " data-aos="fade-up" data-aos-offset="300" data-aos-delay="100"
+                        data-aos-duration="2000">
                         <div class="card-body">
                             <h4 class="card-title">Pendidikan
                                 <hr>
@@ -125,10 +155,8 @@
                             </div>
                         </div>
                     </div>
-                </div>
-
-                <div class="col-md-6 col-12 pt-3">
-                    <div class="card text-start col-12 ">
+                    <div class="card text-start col-12 mt-3 " data-aos="fade-up" data-aos-offset="300"
+                        data-aos-delay="300" data-aos-duration="2000">
                         <div class="card-body">
                             <h4 class="card-title">Hobi
                                 <hr>
@@ -148,45 +176,49 @@
         </div>
     </section>
 
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#1C1C1C" fill-opacity="1" d="M0,32L26.7,26.7C53.3,21,107,11,160,58.7C213.3,107,267,213,320,256C373.3,299,427,277,480,229.3C533.3,181,587,107,640,101.3C693.3,96,747,160,800,192C853.3,224,907,224,960,213.3C1013.3,203,1067,181,1120,149.3C1173.3,117,1227,75,1280,74.7C1333.3,75,1387,117,1413,138.7L1440,160L1440,320L1413.3,320C1386.7,320,1333,320,1280,320C1226.7,320,1173,320,1120,320C1066.7,320,1013,320,960,320C906.7,320,853,320,800,320C746.7,320,693,320,640,320C586.7,320,533,320,480,320C426.7,320,373,320,320,320C266.7,320,213,320,160,320C106.7,320,53,320,27,320L0,320Z"></path></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path fill="#1C1C1C" fill-opacity="1"
+            d="M0,32L26.7,26.7C53.3,21,107,11,160,58.7C213.3,107,267,213,320,256C373.3,299,427,277,480,229.3C533.3,181,587,107,640,101.3C693.3,96,747,160,800,192C853.3,224,907,224,960,213.3C1013.3,203,1067,181,1120,149.3C1173.3,117,1227,75,1280,74.7C1333.3,75,1387,117,1413,138.7L1440,160L1440,320L1413.3,320C1386.7,320,1333,320,1280,320C1226.7,320,1173,320,1120,320C1066.7,320,1013,320,960,320C906.7,320,853,320,800,320C746.7,320,693,320,640,320C586.7,320,533,320,480,320C426.7,320,373,320,320,320C266.7,320,213,320,160,320C106.7,320,53,320,27,320L0,320Z">
+        </path>
+    </svg>
     <!-- Gallery -->
     <section id="gallery" class="gallery">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-md-12 col-10 text-center pt-2 ">
-                    <h2>GALLERY</h2>
+                    <h2 data-aos="fade-down" data-aos-duration="2000">GALLERY</h2>
                     <hr class="hr">
-                    <p class="description">Foto kenangan semasa hidup</p>
+                    <p class="description" data-aos="fade-up" data-aos-duration="2000">Foto kenangan semasa hidup</p>
                 </div>
             </div>
 
             <div class="row row-cols-lg-3 row-cols-md-3 row-cols-sm-2 row-cols-1 justify-content-center">
                 <div class="col mt-3">
-                        <img src="img/thumbnail/1.jpg" alt="foto 1" class="">
+                    <img src="img/thumbnail/1.jpg" alt="foto 1" class="" data-aos="flip-left" data-aos-duration="2000">
                 </div>
                 <div class="col mt-3">
-                        <img src="img/thumbnail/2.jpg" alt="foto 1" class="">
+                    <img src="img/thumbnail/2.jpg" alt="foto 1" class="" data-aos="flip-left" data-aos-duration="2000">
                 </div>
                 <div class="col mt-3">
-                        <img src="img/thumbnail/3.jpg" alt="foto 1" class="">
+                    <img src="img/thumbnail/3.jpg" alt="foto 1" class="" data-aos="flip-left" data-aos-duration="2000">
                 </div>
                 <div class="col mt-3">
-                        <img src="img/thumbnail/4.jpg" alt="foto 1" class="">
+                    <img src="img/thumbnail/4.jpg" alt="foto 1" class="" data-aos="flip-left" data-aos-duration="2000">
                 </div>
                 <div class="col mt-3">
-                        <img src="img/thumbnail/5.jpg" alt="foto 1" class="">
+                    <img src="img/thumbnail/5.jpg" alt="foto 1" class="" data-aos="flip-left" data-aos-duration="2000">
                 </div>
                 <div class="col mt-3">
-                        <img src="img/thumbnail/6.jpg" alt="foto 1" class="">
+                    <img src="img/thumbnail/6.jpg" alt="foto 1" class="" data-aos="flip-left" data-aos-duration="2000">
                 </div>
                 <div class="col mt-3">
-                        <img src="img/thumbnail/7.jpg" alt="foto 1" class="">
+                    <img src="img/thumbnail/7.jpg" alt="foto 1" class="" data-aos="flip-left" data-aos-duration="2000">
                 </div>
                 <div class="col mt-3">
-                        <img src="img/thumbnail/8.jpg" alt="foto 1" class="">
+                    <img src="img/thumbnail/8.jpg" alt="foto 1" class="" data-aos="flip-left" data-aos-duration="2000">
                 </div>
                 <div class="col mt-3">
-                        <img src="img/thumbnail/9.jpg" alt="foto 1" class="">
+                    <img src="img/thumbnail/9.jpg" alt="foto 1" class="" data-aos="flip-left" data-aos-duration="2000">
                 </div>
 
             </div>
@@ -204,21 +236,22 @@
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-md-12 col-10 text-center pt-2 ">
-                    <h2>PROJETCS</h2>
+                    <h2 data-aos="fade-down" data-aos-duration="2000">PROJETCS</h2>
                     <hr class="hr">
-                    <p class="description">Beberapa project yang sudah dibuat</p>
+                    <p class="description" data-aos="fade-up" data-aos-duration="2000">Beberapa project yang sudah
+                        dibuat</p>
                 </div>
             </div>
             <div class="row  mt-4 justify-content-center">
                 <div class="col-md-5 pt-3">
-                    <div class="card text-start col-12 ">
+                    <div class="card text-start col-12" data-aos="fade-right" data-aos-duration="2000">
                         <div class="card-body">
                             <h4 class="card-title">Wedding
                                 <hr>
                             </h4>
                             <div class="list-group">
                                 <a href="https://naufalhafid.github.io/Haci" target="_blank"
-                                    class="list-group-item list-group-item-action">
+                                    class="list-group-item list-group-item-action text-center">
                                     Haci
                                 </a>
                             </div>
@@ -226,14 +259,14 @@
                     </div>
                 </div>
                 <div class="col-md-5 pt-3">
-                    <div class="card text-start col-12 ">
+                    <div class="card text-start col-12" data-aos="fade-left" data-aos-duration="2000">
                         <div class="card-body">
                             <h4 class="card-title">Food
                                 <hr>
                             </h4>
                             <div class="list-group">
                                 <a href="https://naufalhafid.github.io/warmncozy" target="_blank"
-                                    class="list-group-item list-group-item-action">
+                                    class="list-group-item list-group-item-action text-center">
                                     Warm & Cozy
                                 </a>
                             </div>
@@ -241,14 +274,14 @@
                     </div>
                 </div>
                 <div class="col-md-5 pt-3">
-                    <div class="card text-start col-12 ">
+                    <div class="card text-start col-12" data-aos="fade-up" data-aos-duration="2000">
                         <div class="card-body">
                             <h4 class="card-title">Another
                                 <hr>
                             </h4>
                             <div class="list-group">
                                 <a href="https://naufalhafid.github.io/portofolio" target="_blank"
-                                    class="list-group-item list-group-item-action">
+                                    class="list-group-item list-group-item-action text-center">
                                     Portofolio
                                 </a>
                             </div>
@@ -259,47 +292,51 @@
         </div>
     </section>
 
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#1C1C1C" fill-opacity="1" d="M0,256L26.7,224C53.3,192,107,128,160,96C213.3,64,267,64,320,101.3C373.3,139,427,213,480,229.3C533.3,245,587,203,640,165.3C693.3,128,747,96,800,112C853.3,128,907,192,960,218.7C1013.3,245,1067,235,1120,208C1173.3,181,1227,139,1280,128C1333.3,117,1387,139,1413,149.3L1440,160L1440,320L1413.3,320C1386.7,320,1333,320,1280,320C1226.7,320,1173,320,1120,320C1066.7,320,1013,320,960,320C906.7,320,853,320,800,320C746.7,320,693,320,640,320C586.7,320,533,320,480,320C426.7,320,373,320,320,320C266.7,320,213,320,160,320C106.7,320,53,320,27,320L0,320Z"></path></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path fill="#1C1C1C" fill-opacity="1"
+            d="M0,256L26.7,224C53.3,192,107,128,160,96C213.3,64,267,64,320,101.3C373.3,139,427,213,480,229.3C533.3,245,587,203,640,165.3C693.3,128,747,96,800,112C853.3,128,907,192,960,218.7C1013.3,245,1067,235,1120,208C1173.3,181,1227,139,1280,128C1333.3,117,1387,139,1413,149.3L1440,160L1440,320L1413.3,320C1386.7,320,1333,320,1280,320C1226.7,320,1173,320,1120,320C1066.7,320,1013,320,960,320C906.7,320,853,320,800,320C746.7,320,693,320,640,320C586.7,320,533,320,480,320C426.7,320,373,320,320,320C266.7,320,213,320,160,320C106.7,320,53,320,27,320L0,320Z">
+        </path>
+    </svg>
 
     <section id="social" class="social">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-md-12 col-10 text-center pt-2 ">
-                    <h2>SOCIAL</h2>
+                    <h2 data-aos="fade-down" data-aos-duration="2000">SOCIAL</h2>
                     <hr class="hr">
-                    <p class="description">Hubungi saya di sini</p>
+                    <p class="description" data-aos="fade-up" data-aos-duration="2000">Hubungi saya di sini</p>
                 </div>
             </div>
             <div class="row  mt-4 justify-content-center">
                 <div class="col-md-5 pt-3">
-                    <div class="card text-start col-12 ">
+                    <div class="card text-start col-12" data-aos="zoom-in" data-aos-duration="2000">
                         <div class="card-body">
                             <!-- <h4 class="card-title">Contact
                                 <hr>
                             </h4> -->
                             <div class="list-group">
                                 <a href="mailto:naufalhafid46@gmail.com" target="_blank"
-                                    class="list-group-item list-group-item-action">
+                                    class="list-group-item list-group-item-action text-center">
                                     <i class="bi bi-envelope-fill"></i>
                                     Email
                                 </a>
                                 <a href="https://instagram.com/nopaaaaall" target="_blank"
-                                    class="list-group-item list-group-item-action">
+                                    class="list-group-item list-group-item-action text-center">
                                     <i class="bi bi-instagram"></i>
                                     Instagram
                                 </a>
                                 <a href="https://discord.gg/AJjrW7P" target="_blank"
-                                    class="list-group-item list-group-item-action">
+                                    class="list-group-item list-group-item-action text-center">
                                     <i class="bi bi-discord"></i>
                                     Discord
                                 </a>
                                 <a href="https://github.com/NaufalHafid" target="_blank"
-                                    class="list-group-item list-group-item-action">
+                                    class="list-group-item list-group-item-action text-center">
                                     <i class="bi bi-github"></i>
                                     Github
                                 </a>
-                                <a href="https://open.spotify.com/playlist/0HRjlYcjF9B6aU6VhugDtQ?si=_Rhgz3D8R2qWwGTcgCcMpA" target="_blank"
-                                    class="list-group-item list-group-item-action">
+                                <a href="https://open.spotify.com/playlist/0HRjlYcjF9B6aU6VhugDtQ?si=_Rhgz3D8R2qWwGTcgCcMpA"
+                                    target="_blank" class="list-group-item list-group-item-action text-center">
                                     <i class="bi bi-spotify"></i>
                                     Spotify
                                 </a>
@@ -316,29 +353,35 @@
             d="M0,32L20,58.7C40,85,80,139,120,165.3C160,192,200,192,240,170.7C280,149,320,107,360,74.7C400,43,440,21,480,32C520,43,560,85,600,112C640,139,680,149,720,128C760,107,800,53,840,64C880,75,920,149,960,176C1000,203,1040,181,1080,144C1120,107,1160,53,1200,53.3C1240,53,1280,107,1320,122.7C1360,139,1400,117,1420,106.7L1440,96L1440,0L1420,0C1400,0,1360,0,1320,0C1280,0,1240,0,1200,0C1160,0,1120,0,1080,0C1040,0,1000,0,960,0C920,0,880,0,840,0C800,0,760,0,720,0C680,0,640,0,600,0C560,0,520,0,480,0C440,0,400,0,360,0C320,0,280,0,240,0C200,0,160,0,120,0C80,0,40,0,20,0L0,0Z">
         </path>
     </svg>
-    
-    <footer class=" text-white pb-5">
+
+    <footer class="footer text-white">
         <div class="container">
             <div class="row">
-                <div class="col-lg-6 ">
-                    <p class="text-center">Di design dan dibut menggunakan material: <br>
-                        Bootstrap <br> 
-                        Getwave
+                <div class="col-lg-6 " data-aos="fade-up" data-aos-duration="2000">
+                    <p class="text-center">Didesign dan dibut menggunakan: <br>
+                        Bootstrap <br>
+                        Getwave.io <br>
+                        AOS
                     </p>
                 </div>
-                <div class="col-lg-6">
-                    <p class="text-center">Created with by <a class="" href="https://www.instagram.com/nopaaaaall/">Naufal Hafid</a> </p>
+                <div class="col-lg-6" data-aos="fade-up" data-aos-duration="2000">
+                    <p class="text-center">&copy;2023 NaufalHafid. All Rights Reserved.</p>
+                    <p class="text-center">Dibuat Oleh <a class="" href="https://github.com/NaufalHafid">Naufal
+                            Hafid</a> </p>
                 </div>
             </div>
         </div>
-      </footer>
+    </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
         crossorigin="anonymous"></script>
 
-    <script src="https://cdn.jsdelivr.net/npm/bs5-lightbox@1.8.3/dist/index.bundle.min.js"></script>
-
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 
 </html>
