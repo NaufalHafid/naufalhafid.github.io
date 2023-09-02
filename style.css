@@ -1,19 +1,21 @@
 :root {
     --shadow: 0 2px 2px rgb(0 0 0 /0.5);
-    --bg: #273036;
+    --bg: #1C1C1C;
 }
 
 body {
     font-size: 1.2rem;
     font-family: 'Roboto', sans-serif;
-    min-height: 5000px;
+    /* min-height: 5800px; */
     /* background-color: #666; */
+    color: var(--bg);
+    /* color: #FFE002; */
 }
 
 .about,
 .gallery,
 .projects,
-.contact {
+.social {
     padding-top: 5rem;
     padding-bottom: 8rem;
 }
@@ -21,7 +23,7 @@ body {
 .about p,
 .gallery p,
 .projects p,
-.contact p {
+.social p {
     font-size: 1rem;
     font-weight: 300;
 }
@@ -37,7 +39,7 @@ body {
 }
 
 .gallery .hr,
-.contact .hr {
+.social .hr {
     visibility: visible;
     margin: 0 auto;
     width: 50%;
@@ -51,9 +53,11 @@ body {
 }
 
 .navbar .card {
+    background-color: rgba(255, 255, 255, 0.4) !important;
     backdrop-filter: blur(4px);
     width: 100%;
     box-shadow: var(--shadow);
+
     /* margin: 2rem; */
     /* height: 6rem; */
 }
@@ -66,7 +70,7 @@ body {
 
 .navbar .card a:hover {
     font-weight: bold;
-    color: black;
+    color: var(--bg);
     text-shadow: var(--shadow);
 }
 
@@ -120,23 +124,25 @@ body {
 }
 
 .gallery,
-.contact {
+.social {
     background-color: var(--bg);
     color: white;
 }
 
-.gallery img{
+
+.gallery img {
+    border-radius: 50px 100px;
     position: relative;
     width: 100%;
     height: 100%;
     object-fit: cover;
     box-shadow: 0 0 0 #0000;
     /* filter:sepia(80%) hue-rotate(180deg); */
-    opacity: 0.67;  
+    opacity: 0.67;
     transition: all 0.15s cubic-bezier(0.3, 0.1, 0.3, 0.85);
 }
 
-.gallery img:hover{
+.gallery img:hover {
     z-index: 1;
     transform: scale(1.2);
     border-radius: 5px;
@@ -146,8 +152,20 @@ body {
     transition: all 0.3s cubic-bezier(0.3, 0.1, 0.3, 0.85);
 }
 
+footer,
+footer a,
+footer p {
+    background-color: none;
+    color: var(--bg);
+    text-decoration: solid;
+    font-weight: bold;
+    padding-bottom: 7rem;
+}
 
-@media (max-width: 1200px) {}
+
+@media (max-width: 1200px) {
+    
+}
 
 /* laptop */
 @media (max-width: 992px) {
