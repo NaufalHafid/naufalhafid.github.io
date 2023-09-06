@@ -17,6 +17,13 @@ body {
     background: linear-gradient(to right, #333399, #ff00cc);
 }
 
+::-webkit-scrollbar{
+    width: 0px;
+}
+::-webkit-scrollbar-track{
+    background-color: var(--bg);
+}
+
 .about,
 .gallery,
 .projects,
