@@ -12,7 +12,7 @@ body {
     /* background-size: 100rem; */
     /* background-position: center; */
     /* background-repeat: no-repeat; */
-    background: #ff00cc;
+    /* background: #ff00cc; */
     background: -webkit-linear-gradient(to right, #333399, #ff00cc);
     background: linear-gradient(to right, #333399, #ff00cc);
 }
