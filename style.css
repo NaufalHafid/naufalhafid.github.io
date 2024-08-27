@@ -296,15 +296,20 @@ body.dark{
 footer a,
 footer p {
     background-color: none;
-    color: white;
+    color: var(--bg);
     text-decoration: none;
-    /* font-weight: bold; */
+    font-weight: bold;
     font-size: small;
     font-family: 'Roboto', sans-serif;
 }
 
 
 
+@media (max-width: 2400px) {
+    html {
+        font-size: 75%;
+    }
+}
 
 @media (max-width: 1200px) {
     html {
