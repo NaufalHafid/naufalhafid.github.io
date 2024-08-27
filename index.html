@@ -30,7 +30,7 @@
 
 
 
-    <div class="navbar container fixed-bottom pb-5 " >
+    <div class="navbar container fixed-bottom pb-5 ">
         <div class="card text-center ">
             <div class="card-body">
                 <ul class="nav justify-content-center">
@@ -64,6 +64,11 @@
                             <span>Social</span>
                         </a>
                     </li>
+                    <!-- <li class="nav-item" style="float: right;">
+                        <div class="form-check form-switch">
+                            <input class="form-check-input" type="checkbox" role="switch" id="dark-mode-toggle">
+                        </div>
+                    </li> -->
                 </ul>
             </div>
         </div>
@@ -82,10 +87,21 @@
                     <div class="col-3 " data-aos="flip-left" data-aos-duration="2000">
                         <img src="img/thumbnail/1.jpg" alt="Naufal Hafid Mardhatillah">
                     </div>
+                    <div class="container pt-5 d-flex justify-content-center align-items-center">
+                        <div class="one-quarter" id="switch">
+                            <input type="checkbox" class="checkbox" id="chk" />
+                            <label class="label" for="chk">
+                                <i class="bi bi-moon-stars-fill"></i>
+                                <i class="bi bi-sun-fill"></i>
+                                <div class="ball"></div>
+                            </label>
+                        </div>
+                    </div>
                 </div>
             </div>
         </main>
     </section>
+
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path fill="#1C1C1C" fill-opacity="1"
             d="M0,160L24,138.7C48,117,96,75,144,90.7C192,107,240,181,288,176C336,171,384,85,432,74.7C480,64,528,128,576,128C624,128,672,64,720,74.7C768,85,816,171,864,176C912,181,960,107,1008,101.3C1056,96,1104,160,1152,154.7C1200,149,1248,75,1296,42.7C1344,11,1392,21,1416,26.7L1440,32L1440,0L1416,0C1392,0,1344,0,1296,0C1248,0,1200,0,1152,0C1104,0,1056,0,1008,0C960,0,912,0,864,0C816,0,768,0,720,0C672,0,624,0,576,0C528,0,480,0,432,0C384,0,336,0,288,0C240,0,192,0,144,0C96,0,48,0,24,0L0,0Z">
@@ -165,11 +181,12 @@
                                 <h5>IT Support/SDN 06 Taeh Baruah</h5>
                                 <li>Membantu Instalasi proyektor yang akan digunakan pengajar</li>
                                 <li>Mempersiapkan materi PPT untuk pengajar</li>
-                                <li>Membantu  mendokumentasikan bahan PTK untuk pengajar</li>
+                                <li>Membantu mendokumentasikan bahan PTK untuk pengajar</li>
                                 <li>Membantu berbagai hal tentang Akreditasi Sekolah</li>
                                 <hr>
                                 <h5>Frontend Dev/Magang Folarium Innotek Indonesia</h5>
-                                <li>Mengembangkan system ERP menggunakan framework CI dan Bootstrap dan mengesahkan tugas di Trello dan Bitbucket</li>
+                                <li>Mengembangkan system ERP menggunakan framework CI dan Bootstrap dan mengesahkan
+                                    tugas di Trello dan Bitbucket</li>
                                 <li>Memperbaiki kesalahan UI yang diminta</li>
                                 <li>Bertanggung jawab atas codingan yang bermasalah (bug) di bagiaan forntend</li>
                             </p>
@@ -195,7 +212,7 @@
 
         </div>
     </section>
-    
+
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path fill="#1C1C1C" fill-opacity="1"
             d="M0,32L26.7,26.7C53.3,21,107,11,160,58.7C213.3,107,267,213,320,256C373.3,299,427,277,480,229.3C533.3,181,587,107,640,101.3C693.3,96,747,160,800,192C853.3,224,907,224,960,213.3C1013.3,203,1067,181,1120,149.3C1173.3,117,1227,75,1280,74.7C1333.3,75,1387,117,1413,138.7L1440,160L1440,320L1413.3,320C1386.7,320,1333,320,1280,320C1226.7,320,1173,320,1120,320C1066.7,320,1013,320,960,320C906.7,320,853,320,800,320C746.7,320,693,320,640,320C586.7,320,533,320,480,320C426.7,320,373,320,320,320C266.7,320,213,320,160,320C106.7,320,53,320,27,320L0,320Z">
@@ -399,13 +416,57 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
-        crossorigin="anonymous"></script>
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous">
+    </script>
 
     <!-- AOS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init();
+    </script>
+
+    <!-- dark mode 1 -->
+    <!-- <script>
+        const toggleSwitch = document.getElementById('dark-mode-toggle');
+        const body = document.body;
+
+        // Memeriksa apakah user sebelumnya memilih dark mode
+        if (localStorage.getItem('dark-mode') === 'enabled') {
+            body.classList.add('dark-mode');
+            toggleSwitch.checked = true;
+        }
+
+        // Menangani perubahan status checkbox
+        toggleSwitch.addEventListener('change', function () {
+            if (this.checked) {
+                body.classList.add('dark-mode');
+                localStorage.setItem('dark-mode', 'enabled');
+            } else {
+                body.classList.remove('dark-mode');
+                localStorage.setItem('dark-mode', 'disabled');
+            }
+        });
+    </script> -->
+    <!-- dark mode 2 -->
+    <script>
+        const chk = document.getElementById('chk');
+
+        chk.addEventListener('change', () => {
+            document.body.classList.toggle('dark');
+        });
+
+        // SOCIAL PANEL JS
+        const floating_btn = document.querySelector('.floating-btn');
+        const close_btn = document.querySelector('.close-btn');
+        const social_panel_container = document.querySelector('.social-panel-container');
+
+        floating_btn.addEventListener('click', () => {
+            social_panel_container.classList.toggle('visible')
+        });
+
+        close_btn.addEventListener('click', () => {
+            social_panel_container.classList.remove('visible')
+        });
     </script>
 </body>
 
