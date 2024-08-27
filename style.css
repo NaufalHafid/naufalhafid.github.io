@@ -25,7 +25,7 @@ body.dark{
     background: linear-gradient(to right, #2D3250, #7077A1);
 }
 
-/* .switch {
+.switch {
     position: fixed;
     top: 10px;
     right: 10px;
@@ -40,7 +40,7 @@ body.dark{
 .switch label {
     cursor: pointer;
     padding: 5px;
-} */
+}
 
 .checkbox {
 	opacity: 0;
@@ -78,12 +78,12 @@ body.dark{
 }
 
 
-.fa-moon {
-	color: #f1c40f;
+.bi-sun-fill {
+	color: #E7F6F2;
 }
 
-.fa-sun {
-	color: #f39c12;
+.bi-moon-fill{
+	color: #7077A1;
 }
 
 
@@ -306,7 +306,11 @@ footer p {
 
 
 
-@media (max-width: 1200px) {}
+@media (max-width: 1200px) {
+    html {
+        font-size: 65%;
+    }
+}
 
 /* laptop */
 @media (max-width: 992px) {
