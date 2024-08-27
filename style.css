@@ -173,7 +173,7 @@ body.dark{
 
 .home {
     position: relative;
-    min-height: 100vh;
+    min-height: 75vh;
     /* background-color: var(--bg); */
     /* text-shadow: var(--shadow); */
 }
