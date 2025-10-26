@@ -5,7 +5,7 @@
 
 body {
     font-size: 1.2rem;
-    font-family: 'Roboto', sans-serif;
+   font-family: "Sansation", sans-serif;
     /* min-height: 5800px; */
     /* color: var(--bg); */
     /* background-image: url(img/bgg.png); */
@@ -23,6 +23,7 @@ body {
 
 body.dark{
     background: linear-gradient(to right, #2D3250, #7077A1);
+    color: white;
 }
 
 .switch {
@@ -232,8 +233,32 @@ body.dark{
     margin-bottom: 0.5rem;
 }
 
-.card .list-group-item:hover {
+.card .email:hover {
     color: white;
+    background-color: var(--bg);
+}
+.card .instagram:hover {
+    color: #e95950;
+    background-color: var(--bg);
+}
+.card .linkedin:hover {
+    color: #0077B5;
+    background-color: var(--bg);
+}
+.card .tiktok:hover {
+    color: black;
+    background-color: var(--bg);
+}
+.card .discord:hover {
+    color: #5865F2;
+    background-color: var(--bg);
+}
+.card .github:hover {
+    color: white;
+    background-color: var(--bg);
+}
+.card .spotify:hover {
+    color: #1DB954;
     background-color: var(--bg);
 }
 
