@@ -637,7 +637,7 @@
         });
     </script> -->
     <!-- dark mode 2 -->
-    <script>
+    <!-- <script>
         const chk = document.getElementById('chk');
 
         chk.addEventListener('change', () => {
@@ -656,6 +656,76 @@
         close_btn.addEventListener('click', () => {
             social_panel_container.classList.remove('visible')
         });
+    </script> -->
+
+    <script>
+        const chk = document.getElementById('chk');
+        const STORAGE_KEY = 'darkModeEnabled';
+
+        // 1. Fungsi untuk menerapkan tema
+        function applyTheme(isDark) {
+            if (isDark) {
+                document.body.classList.add('dark');
+                chk.checked = true; // Pastikan checkbox tercentang
+            } else {
+                document.body.classList.remove('dark');
+                chk.checked = false; // Pastikan checkbox tidak tercentang
+            }
+        }
+
+        // 2. Mendeteksi Tema Awal: Prioritas LocalStorage > Preferensi Sistem
+        function initializeTheme() {
+            const storedPreference = localStorage.getItem(STORAGE_KEY);
+            let isDark = false;
+
+            if (storedPreference !== null) {
+                // Jika ada di LocalStorage, gunakan itu
+                isDark = storedPreference === 'true';
+            } else {
+                // Jika tidak ada di LocalStorage, cek preferensi sistem
+                isDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+            }
+
+            applyTheme(isDark);
+        }
+
+        // 3. Menangani Perubahan: Simpan ke LocalStorage dan terapkan
+        chk.addEventListener('change', () => {
+            const isDark = chk.checked;
+            applyTheme(isDark);
+            // Simpan pilihan ke LocalStorage agar tema tetap
+            localStorage.setItem(STORAGE_KEY, isDark);
+        });
+
+        // Panggil fungsi inisialisasi saat script dimuat
+        initializeTheme();
+
+        // Opsional: Dengarkan perubahan preferensi sistem secara real-time
+        window.matchMedia('(prefers-color-scheme: dark)').addListener(e => {
+            // Hanya ubah jika pengguna belum menentukan pilihan di LocalStorage (pilihan 'auto')
+            // Namun, karena kita selalu menyimpan ke LocalStorage, ini mungkin tidak diperlukan
+            // jika Anda ingin LocalStorage menjadi prioritas utama.
+            if (localStorage.getItem(STORAGE_KEY) === null) {
+                applyTheme(e.matches);
+            }
+        });
+
+        // --- Kode SOCIAL PANEL Anda yang Tidak Diubah ---
+        const floating_btn = document.querySelector('.floating-btn');
+        const close_btn = document.querySelector('.close-btn');
+        const social_panel_container = document.querySelector('.social-panel-container');
+
+        if (floating_btn && social_panel_container && close_btn) {
+            floating_btn.addEventListener('click', () => {
+                social_panel_container.classList.toggle('visible')
+            });
+
+            close_btn.addEventListener('click', () => {
+                social_panel_container.classList.remove('visible')
+            });
+        }
+        // -----------------------------------------------
+
     </script>
 </body>
 
