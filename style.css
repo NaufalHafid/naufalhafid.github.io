@@ -261,6 +261,10 @@ body.dark{
     color: #1DB954;
     background-color: var(--bg);
 }
+.card .web:hover {
+    color: #0077B5;
+    background-color: var(--bg);
+}
 
 .circle1,
 .circle2 {
