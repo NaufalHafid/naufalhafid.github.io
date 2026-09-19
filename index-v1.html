@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio Naufal Hafid Mardhatillah — Information Systems graduate with experience in data administration, digital marketing, and web development.">
+  <title>Naufal Hafid Mardhatillah — Portfolio</title>
+
+  <style>
+    :root{
+      --bg:#0b0d10;
+      --surface:#11151a;
+      --surface-2:#171c22;
+      --text:#f4f7fb;
+      --muted:#9ba5b1;
+      --line:#252c34;
+      --accent:#7c5cff;
+      --accent-2:#a78bfa;
+      --max:1120px;
+      --radius:20px;
+    }
+
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{
+      font-family:Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background:var(--bg);
+      color:var(--text);
+      line-height:1.7;
+    }
+    a{color:inherit;text-decoration:none}
+    .container{width:min(var(--max),92%);margin:auto}
+
+    /* NAVBAR */
+    header{
+      position:sticky;top:0;z-index:100;
+      background:rgba(11,13,16,.82);
+      backdrop-filter:blur(16px);
+      border-bottom:1px solid rgba(255,255,255,.06);
+    }
+    nav{
+      min-height:72px;display:flex;align-items:center;justify-content:space-between;
+    }
+    .logo{font-weight:800;letter-spacing:-.03em;font-size:1.05rem}
+    .logo span{color:var(--accent-2)}
+    .nav-links{display:flex;gap:28px;list-style:none}
+    .nav-links a{color:var(--muted);font-size:.92rem;transition:.25s}
+    .nav-links a:hover{color:var(--text)}
+    .menu{display:none;background:none;border:0;color:white;font-size:1.5rem}
+
+    /* HERO */
+    .hero{
+      min-height:calc(100vh - 72px);
+      display:grid;place-items:center;
+      position:relative;overflow:hidden;
+    }
+    .hero::before{
+      content:"";position:absolute;width:520px;height:520px;
+      background:var(--accent);opacity:.13;filter:blur(120px);
+      border-radius:50%;top:5%;right:-10%;
+    }
+    .hero-content{position:relative;max-width:850px}
+    .eyebrow{
+      display:inline-flex;padding:7px 12px;border:1px solid var(--line);
+      border-radius:999px;color:var(--accent-2);font-size:.82rem;
+      margin-bottom:22px;background:rgba(124,92,255,.06);
+    }
+    h1{
+      font-size:clamp(2.8rem,7vw,5.8rem);
+      line-height:1.02;letter-spacing:-.065em;margin-bottom:24px;
+    }
+    h1 span{color:var(--accent-2)}
+    .hero p{max-width:720px;color:var(--muted);font-size:1.08rem}
+    .actions{display:flex;gap:12px;margin-top:32px;flex-wrap:wrap}
+    .btn{
+      padding:12px 19px;border-radius:12px;border:1px solid var(--line);
+      font-weight:700;font-size:.92rem;transition:.25s;
+    }
+    .btn.primary{background:var(--text);color:#0b0d10;border-color:var(--text)}
+    .btn.secondary:hover{border-color:var(--accent-2);color:var(--accent-2)}
+
+    /* SECTIONS */
+    section{padding:100px 0}
+    .section-label{
+      color:var(--accent-2);font-size:.8rem;font-weight:800;
+      text-transform:uppercase;letter-spacing:.16em;margin-bottom:10px;
+    }
+    h2{font-size:clamp(2rem,4vw,3rem);letter-spacing:-.04em;margin-bottom:18px}
+    .lead{color:var(--muted);max-width:720px}
+
+    /* ABOUT */
+    .about-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:60px;align-items:start}
+    .about-copy p{color:var(--muted);margin-top:16px}
+    .quick-info{display:grid;gap:12px}
+    .info-card{
+      padding:18px 20px;background:var(--surface);
+      border:1px solid var(--line);border-radius:15px;
+    }
+    .info-card small{display:block;color:var(--muted);margin-bottom:3px}
+    .info-card strong{font-size:.98rem}
+
+    /* SKILLS */
+    .skills-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:35px}
+    .skill-card{
+      background:var(--surface);border:1px solid var(--line);
+      padding:25px;border-radius:var(--radius);
+    }
+    .skill-card h3{margin-bottom:12px;font-size:1rem}
+    .tags{display:flex;gap:8px;flex-wrap:wrap}
+    .tag{
+      padding:6px 10px;border-radius:999px;background:var(--surface-2);
+      color:#cbd2da;font-size:.8rem;border:1px solid var(--line)
+    }
+
+    /* EXPERIENCE */
+    .timeline{margin-top:40px;border-left:1px solid var(--line);padding-left:28px}
+    .job{position:relative;padding:0 0 38px}
+    .job::before{
+      content:"";position:absolute;left:-34px;top:8px;width:10px;height:10px;
+      background:var(--accent-2);border-radius:50%;box-shadow:0 0 0 5px var(--bg);
+    }
+    .job h3{font-size:1.1rem}
+    .job .meta{color:var(--accent-2);font-size:.85rem;margin:4px 0 10px}
+    .job ul{padding-left:18px;color:var(--muted)}
+    .job li{margin:4px 0}
+
+    /* PROJECTS */
+    .projects{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:35px}
+    .project{
+      padding:28px;background:var(--surface);border:1px solid var(--line);
+      border-radius:var(--radius);transition:.25s;
+    }
+    .project:hover{transform:translateY(-4px);border-color:#414957}
+    .project-number{color:var(--accent-2);font-size:.8rem;font-weight:800}
+    .project h3{margin:8px 0 8px;font-size:1.25rem}
+    .project p{color:var(--muted);font-size:.92rem}
+    .project .tags{margin-top:18px}
+
+    /* EDUCATION */
+    .education-card{
+      margin-top:35px;padding:28px;background:var(--surface);
+      border:1px solid var(--line);border-radius:var(--radius);
+    }
+    .education-card h3{font-size:1.2rem}
+    .education-card p{color:var(--muted)}
+    .education-card strong{color:var(--accent-2)}
+
+    /* CONTACT */
+    .contact-box{
+      padding:55px;border:1px solid var(--line);border-radius:28px;
+      background:linear-gradient(135deg,var(--surface),#101319);
+      text-align:center;
+    }
+    .contact-box p{color:var(--muted);max-width:620px;margin:0 auto}
+    .contact-links{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:28px}
+    footer{padding:30px 0;border-top:1px solid var(--line);color:var(--muted);font-size:.85rem}
+
+    /* MOBILE */
+    @media(max-width:800px){
+      .nav-links{display:none;position:absolute;top:72px;left:0;right:0;
+        flex-direction:column;gap:0;background:var(--bg);border-bottom:1px solid var(--line)}
+      .nav-links.open{display:flex}
+      .nav-links li a{display:block;padding:14px 4%;width:100%}
+      .menu{display:block}
+      .about-grid,.skills-grid{grid-template-columns:1fr}
+      .projects{grid-template-columns:1fr}
+      section{padding:75px 0}
+      .contact-box{padding:35px 22px}
+    }
+  </style>
+</head>
+
+<body>
+<header>
+  <div class="container">
+    <nav>
+      <a class="logo" href="#home">Naufal<span>.</span></a>
+      <button class="menu" aria-label="Buka menu" onclick="toggleMenu()">☰</button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero" id="home">
+    <div class="container">
+      <div class="hero-content">
+        <div class="eyebrow">Information Systems Graduate · Data · Digital</div>
+        <h1>Hi, I'm <span>Naufal Hafid.</span></h1>
+        <p>
+          Saya lulusan S1 Sistem Informasi dengan pengalaman dalam administrasi data,
+          pengelolaan dokumen, digital marketing, media sosial, dan pengembangan solusi berbasis web.
+        </p>
+        <div class="actions">
+          <a class="btn primary" href="#projects">View Projects</a>
+          <a class="btn secondary" href="mailto:naufalhafidmardhatillah@gmail.com">Let's Connect</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="container">
+      <div class="section-label">01 — About</div>
+      <div class="about-grid">
+        <div class="about-copy">
+          <h2>Data, digital, and practical technology.</h2>
+          <p>
+            Saya memiliki pengalaman dalam mengolah data, menyusun laporan, mengelola dokumen,
+            serta mengelola konten dan performa media sosial di berbagai platform.
+          </p>
+          <p>
+            Saya terbiasa menggunakan Spreadsheet, Notion, dan AI Tools untuk membantu meningkatkan
+            efisiensi pekerjaan, sekaligus memiliki kemampuan analisis data dan komunikasi yang baik.
+          </p>
+        </div>
+        <div class="quick-info">
+          <div class="info-card">
+            <small>Email</small>
+            <strong>naufalhafidmardhatillah@gmail.com</strong>
+          </div>
+          <div class="info-card">
+            <small>Location</small>
+            <strong>Indonesia</strong>
+          </div>
+          <div class="info-card">
+            <small>LinkedIn</small>
+            <strong>linkedin.com/in/naufalhafid</strong>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="container">
+      <div class="section-label">02 — Skills</div>
+      <h2>Tools I work with.</h2>
+      <p class="lead">Kombinasi kemampuan administrasi, data, digital content, dan project management.</p>
+
+      <div class="skills-grid">
+        <div class="skill-card">
+          <h3>Data & Administration</h3>
+          <div class="tags">
+            <span class="tag">Microsoft Excel</span><span class="tag">Microsoft Word</span>
+            <span class="tag">Microsoft Access</span><span class="tag">Data Management</span>
+            <span class="tag">Document Management</span><span class="tag">Reporting</span>
+          </div>
+        </div>
+
+        <div class="skill-card">
+          <h3>Digital & Content</h3>
+          <div class="tags">
+            <span class="tag">Canva</span><span class="tag">CapCut</span>
+            <span class="tag">Instagram</span><span class="tag">TikTok</span>
+            <span class="tag">YouTube</span><span class="tag">Content Planning</span>
+          </div>
+        </div>
+
+        <div class="skill-card">
+          <h3>Technology & Tools</h3>
+          <div class="tags">
+            <span class="tag">MySQL</span><span class="tag">Python</span>
+            <span class="tag">Microsoft Visio</span><span class="tag">Notion</span>
+            <span class="tag">Trello</span><span class="tag">AI Tools</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience">
+    <div class="container">
+      <div class="section-label">03 — Experience</div>
+      <h2>Where I've worked.</h2>
+
+      <div class="timeline">
+        <article class="job">
+          <h3>Admin Data Marketing — Abuds Group</h3>
+          <div class="meta">Payakumbuh · September 2025 — April 2026</div>
+          <ul>
+            <li>Mengelola dan mengembangkan media sosial Instagram, TikTok, YouTube, dan Facebook.</li>
+            <li>Menyusun content planning dan mengatur publikasi konten secara konsisten.</li>
+            <li>Mengelola komunikasi dan koordinasi dengan influencer untuk kebutuhan promosi.</li>
+            <li>Merekap dan menganalisis komplain pelanggan dari GoFood, GrabFood, dan ShopeeFood.</li>
+            <li>Menyusun laporan performa media sosial serta menganalisis data penjualan untuk strategi promo.</li>
+          </ul>
+        </article>
+
+        <article class="job">
+          <h3>Data Entry — PT. PLN (Persero), Komunikasi & TJSL</h3>
+          <div class="meta">Padang · Oktober 2024 — April 2025</div>
+          <ul>
+            <li>Menginput, mengelola, dan menganalisis data program komunikasi dan TJSL untuk rekapan media PLN UID Sumbar.</li>
+            <li>Mengelola data dalam jumlah besar untuk memastikan integritas dan kemudahan akses.</li>
+            <li>Menggunakan Python untuk analisis data, pembuatan laporan, dan otomatisasi tugas.</li>
+          </ul>
+        </article>
+
+        <article class="job">
+          <h3>Intern — PT. PLN (Persero), Komunikasi & TJSL</h3>
+          <div class="meta">Padang · Agustus 2024 — September 2025</div>
+          <ul>
+            <li>Mendukung pengelolaan data dan penyusunan laporan kegiatan program TJSL.</li>
+            <li>Mengelola data program TJSL agar tersusun dengan baik untuk laporan dan dokumentasi perusahaan.</li>
+          </ul>
+        </article>
+
+        <article class="job">
+          <h3>Intern — Kelurahan Alai Parak Kopi</h3>
+          <div class="meta">Padang · Februari 2024 — April 2024</div>
+          <ul>
+            <li>Mengumpulkan data untuk pengembangan sistem pendukung keputusan penerima bantuan sosial.</li>
+            <li>Merancang sistem berbasis web dengan metode Analytical Hierarchy Process (AHP).</li>
+            <li>Mengembangkan solusi untuk membantu proses seleksi penerima bantuan sosial.</li>
+          </ul>
+        </article>
+
+        <article class="job">
+          <h3>Intern (Backend Engineer) — PT. Folarium Innotect Indonesia</h3>
+          <div class="meta">Yogyakarta · Januari 2020 — April 2020</div>
+          <ul>
+            <li>Mendukung pengelolaan dokumentasi proyek ERP dan koordinasi administrasi tim.</li>
+            <li>Menggunakan Trello untuk pencatatan tugas, monitoring progress, dan dokumentasi pekerjaan.</li>
+            <li>Menyusun laporan perkembangan proyek untuk mendukung Project Manager.</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="container">
+      <div class="section-label">04 — Projects</div>
+      <h2>Selected projects.</h2>
+      <p class="lead">Beberapa project yang relevan dengan latar belakang Sistem Informasi dan pengembangan solusi digital.</p>
+
+      <div class="projects">
+        <article class="project">
+          <span class="project-number">01</span>
+          <h3>SPK Penerima Bantuan Sosial</h3>
+          <p>Sistem pendukung keputusan berbasis web untuk membantu proses seleksi penerima bantuan sosial di Kelurahan Alai Parak Kopi menggunakan metode AHP.</p>
+          <div class="tags"><span class="tag">Web</span><span class="tag">AHP</span><span class="tag">Decision Support System</span></div>
+        </article>
+
+        <article class="project">
+          <span class="project-number">02</span>
+          <h3>SPK Pemilihan Jurusan</h3>
+          <p>Sistem pendukung keputusan berbasis web untuk membantu rekomendasi jurusan berdasarkan kompetensi siswa RPL menggunakan metode SAW.</p>
+          <div class="tags"><span class="tag">Web</span><span class="tag">SAW</span><span class="tag">Information System</span></div>
+        </article>
+
+        <article class="project">
+          <span class="project-number">03</span>
+          <h3>Website Kasir Bengkel</h3>
+          <p>Aplikasi kasir berbasis web untuk mendukung pencatatan transaksi dan pengelolaan data pada usaha bengkel motor.</p>
+          <div class="tags"><span class="tag">Web</span><span class="tag">Database</span><span class="tag">PHP</span></div>
+        </article>
+
+        <article class="project">
+          <span class="project-number">04</span>
+          <h3>ERP Project Support</h3>
+          <p>Kontribusi pada pengelolaan dokumentasi dan koordinasi pekerjaan dalam proyek pengembangan ERP.</p>
+          <div class="tags"><span class="tag">ERP</span><span class="tag">Trello</span><span class="tag">Project Management</span></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="education">
+    <div class="container">
+      <div class="section-label">05 — Education</div>
+      <h2>Education.</h2>
+      <div class="education-card">
+        <h3>S1 Sistem Informasi</h3>
+        <p>Universitas Putra Indonesia (YPTK) Padang</p>
+        <p><strong>September 2021 — Mei 2025</strong></p>
+        <p style="margin-top:10px">IPK: 3.68 / 4.00 (Cumlaude)</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <div class="contact-box">
+        <div class="section-label">06 — Contact</div>
+        <h2>Let's connect.</h2>
+        <p>Terbuka untuk peluang kerja, kolaborasi project, dan kesempatan untuk berkembang di bidang data, digital, maupun teknologi.</p>
+        <div class="contact-links">
+          <a class="btn primary" href="mailto:naufalhafidmardhatillah@gmail.com">Email Me</a>
+          <a class="btn secondary" href="https://linkedin.com/in/naufalhafid" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="btn secondary" href="https://github.com/naufalhafid" target="_blank" rel="noopener">GitHub</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container">
+    © 2026 Naufal Hafid Mardhatillah. Built with HTML & CSS.
+  </div>
+</footer>
+
+<script>
+  function toggleMenu(){
+    document.getElementById('navLinks').classList.toggle('open');
+  }
+
+  document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+      document.getElementById('navLinks').classList.remove('open');
+    });
+  });
+</script>
+</body>
+</html>

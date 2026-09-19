@@ -1,739 +1,523 @@
 <!doctype html>
-<html lang="en">
+<html lang="id" data-theme="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="description" content="Portfolio Naufal Hafid Mardhatillah" />
+    <title>Naufal Hafid Mardhatillah — Portfolio</title>
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+  </head>
+  <link rel="stylesheet" href="style.css" />
+  <body>
+    <canvas id="particles"></canvas>
+    <div class="aurora"></div>
+    <div class="grid"></div>
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Portofolio</title>
-    <link rel="icon" href="img/Icon.png">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <header>
+      <div class="wrap">
+        <nav>
+          <a class="logo" href="#home">Naufal<span>.</span></a>
+          <div class="tools">
+            <ul class="nav" id="nav">
+              <li><a href="#about">About</a></li>
+              <li><a href="#skills">Skills</a></li>
+              <li><a href="#experience">Experience</a></li>
+              <li><a href="#projects">Projects</a></li>
+              <li><a href="#gallery">Gallery</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button class="theme" id="theme">☀</button
+            ><button class="menu" id="menu">☰</button>
+          </div>
+        </nav>
+      </div>
+    </header>
 
-    <!-- Icon -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-
-    <!-- css -->
-    <link rel="stylesheet" href="style.css">
-
-    <!-- AOS -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-
-    <!-- font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
-        rel="stylesheet">
-</head>
-
-<body>
-    <div class="navbar container fixed-bottom pb-5 ">
-        <div class="card text-center ">
-            <div class="card-body">
-                <ul class="nav justify-content-center">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#home">
-                            <i class="bi bi-house-fill d-block"></i>
-                            <span>HOME</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#about">
-                            <i class="bi bi-person-fill d-block"></i>
-                            <span>ABOUT</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#gallery">
-                            <i class="bi bi-camera-fill d-block"></i>
-                            <span>GALLERY</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#projects">
-                            <i class="bi bi-stack d-block"></i>
-                            <span>PROJECTS</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#social">
-                            <i class="bi bi-envelope-fill d-block"></i>
-                            <span>SOCIAL</span>
-                        </a>
-                    </li>
-                    <!-- <li class="nav-item" style="float: right;">
-                        <div class="form-check form-switch">
-                            <input class="form-check-input" type="checkbox" role="switch" id="dark-mode-toggle">
-                        </div>
-                    </li> -->
-                </ul>
-            </div>
+    <main>
+      <section class="hero" id="home">
+        <div class="wrap" data-aos="fade-up" data-aos-duration="900">
+          <div class="eyebrow">
+            <span class="dot"></span> Available for opportunities
+          </div>
+          <h1>Hi, I'm <span class="gradient">Naufal Hafid.</span></h1>
+          <p>
+            Lulusan S1 Sistem Informasi dengan pengalaman dalam administrasi
+            data, digital marketing, media sosial, dan pengembangan solusi
+            berbasis teknologi.
+          </p>
+          <div class="actions">
+            <a class="btn primary" href="#projects">Explore My Work ↓</a
+            ><a
+              class="btn secondary"
+              href="mailto:naufalhafidmardhatillah@gmail.com"
+              >Let's Connect</a
+            >
+          </div>
         </div>
-    </div>
+        <div class="scroll">Scroll to explore ↓</div>
+      </section>
 
-    <!-- Home -->
-    <section id="home"
-        class="home w-100 h-100 p-3 mx-auto text-center d-flex justify-content-center align-items-center text-white">
-        <main>
-            <div class=" col-lg-12">
-                <div class="row profile">
-                    <div class="col-7 text-end" data-aos="fade-right" data-aos-duration="2000">
-                        <h2>NAUFAL HAFID MARDHATILLAH</h2>
-                        <p>Web Dev || Frontend Dev</p>
-                    </div>
-                    <div class="col-3 " data-aos="flip-left" data-aos-duration="2000">
-                        <img src="img/thumbnail/1.jpg" alt="Naufal Hafid Mardhatillah">
-                    </div>
-                    <div class="container pt-5 d-flex justify-content-center align-items-center">
-                        <div class="one-quarter" id="switch">
-                            <input type="checkbox" class="checkbox" id="chk" />
-                            <label class="label" for="chk">
-                                <i class="bi bi-moon-fill"></i>
-                                <i class="bi bi-sun-fill"></i>
-                                <div class="ball"></div>
-                            </label>
-                        </div>
-                    </div>
-                </div>
+      <section class="sec" id="about">
+        <div class="wrap about">
+          <div data-aos="fade-right">
+            <div class="label">01 — About</div>
+            <h2>Data, digital & practical technology.</h2>
+            <p>
+              Saya memiliki pengalaman dalam mengolah data, menyusun laporan,
+              mengelola dokumen, serta mengelola konten dan performa media
+              sosial di berbagai platform.
+            </p>
+            <p>
+              Terbiasa menggunakan Spreadsheet, Notion, dan AI Tools untuk
+              meningkatkan efisiensi kerja, dengan kemampuan analisis data dan
+              komunikasi yang baik.
+            </p>
+          </div>
+          <div class="info" data-aos="fade-left">
+            <div class="glass">
+              <small>Email</small><b>naufalhafidmardhatillah@gmail.com</b>
             </div>
-        </main>
-        <div class="circle2" data-aos="zoom-in" data-aos-duration="1500"></div>
-    </section>
-
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-        <path fill="#1C1C1C" fill-opacity="1"
-            d="M0,160L24,138.7C48,117,96,75,144,90.7C192,107,240,181,288,176C336,171,384,85,432,74.7C480,64,528,128,576,128C624,128,672,64,720,74.7C768,85,816,171,864,176C912,181,960,107,1008,101.3C1056,96,1104,160,1152,154.7C1200,149,1248,75,1296,42.7C1344,11,1392,21,1416,26.7L1440,32L1440,0L1416,0C1392,0,1344,0,1296,0C1248,0,1200,0,1152,0C1104,0,1056,0,1008,0C960,0,912,0,864,0C816,0,768,0,720,0C672,0,624,0,576,0C528,0,480,0,432,0C384,0,336,0,288,0C240,0,192,0,144,0C96,0,48,0,24,0L0,0Z">
-        </path>
-    </svg>
-
-
-    <!-- About -->
-    <!-- <div class="circle1" ></div> -->
-    <section id="about" class="about">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-md-12 col-10 text-center pt-2 ">
-                    <h2 data-aos="fade-down" data-aos-duration="1500">ABOUT</h2>
-                    <hr class="hr">
-                    <p class="description" data-aos="fade-up" data-aos-duration="1500">PERJALANAN DAN RIWAYAT HIDUP</p>
-                </div>
+            <div class="glass">
+              <small>LinkedIn</small><b>linkedin.com/in/naufalhafid</b>
             </div>
-
-            <div class="row  mt-4 justify-content-center">
-                <div class="col-md-6 pt-3">
-                    <div class="card text-start col-12" data-aos="fade-right" data-aos-duration="1500">
-                        <div class="card-body">
-                            <h4 class="card-title">ME?
-                                <!-- <hr> -->
-                            </h4>
-                            <p class="card-text">
-                                <hr>
-                                Halo, Nama saya Naufal Hafid Mardhatillah, dan dunia digital adalah playground favorit
-                                saya. Mulai dari coding di web pakai HTML, CSS, dan JavaScript, sampai utak-atik desain
-                                presentasi di Canva, semuanya seru buat dicoba. Kadang saya juga bikin video editing di
-                                Capcut, merancang fanpage sendiri, dan sesekali seru-seruan live streaming di TikTok.
-                                <hr>
-                                Selain berkutat di IT dan data, saya senang eksplor sisi kreatif—dulu sempat bikin brand
-                                kecil-kecilan, “Warm & Cozy,” jualan menu homemade pas masih SMK, sampai belajar promosi
-                                digital sendiri. Di kerjaan dan proyek, saya familiar sama aplikasi accounting seperti
-                                Accurate, spreadsheet, dan nggak jarang bikin automation tools pakai Python biar tugas
-                                terasa ringan dan efisien.
-                                <hr>
-                                Buat saya, update kemampuan itu wajib, apalagi di dunia digital yang terus bergerak.
-                                Jadi, setiap hari rasanya selalu ada aja hal baru buat dipelajari dan diaplikasikan,
-                                baik di bidang web development, konten digital, maupun inovasi di social media.
-                            </p>
-                        </div>
-                    </div>
-
-
-                    <div class="card text-start col-12 mt-3" data-aos="fade-right" data-aos-duration="1500">
-                        <div class="card-body">
-                            <h4 class="card-title">PENDIDIKAN
-                                <hr>
-                            </h4>
-                            <div class="list-group">
-                                <a href="https://goo.gl/maps/NJs1WxJJFD8dLcet8" target="_blank"
-                                    class="list-group-item list-group-item-action">
-                                    UPI YPTK Padang - Sistem Informasi
-                                </a>
-                                <a href="https://goo.gl/maps/FJubPyevvymurmbq7" target="_blank"
-                                    class="list-group-item list-group-item-action">
-                                    SMK Negeri 4 Payakumbuh - Rekayasa Perangkat Lunak
-                                </a>
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card text-start col-12 mt-3 " data-aos="fade-right" data-aos-duration="1500">
-                        <div class="card-body">
-                            <h4 class="card-title">HOBI
-                                <hr>
-                            </h4>
-                            <ul class="list-group list-group-flush">
-                                <li class="list-group-item">Gaming</li>
-                                <li class="list-group-item">Menonton Film</li>
-                                <li class="list-group-item">Hal membosankan lainnya</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-6 pt-3" data-aos="fade-up" data-aos-duration="1500">
-                    <div class="card text-start col-12 mb-3">
-                        <div class="card-body">
-                            <h4 class="card-title">PENGALAMAN</h4>
-                            <hr>
-                            <div class="card-header">
-                                Admin Data Accounting – Abud's Group | Oktober 2025 – sekarang
-                            </div>
-                            <ul class="list-group list-group-flush">
-                                <li class="list-group-item">Mengecek e-payment dan omset perusahaan setiap hari</li>
-                                <li class="list-group-item">Memantau penggunaan kas kecil dan membuat checklist
-                                    pembayaran</li>
-                                <li class="list-group-item">Rekap dan laporan menggunakan aplikasi Accurate serta
-                                    spreadsheet</li>
-                                <li class="list-group-item">Membuat presentasi meeting mingguan di Canva setiap akhir
-                                    pekan</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="card text-start col-12 mb-3" data-aos="fade-up" data-aos-duration="1500">
-                        <div class="card-body">
-                            <div class="card-header">
-                                Data Entry – PT PLN (Persero) (Komunikasi & TJSL) | Padang, Oktober 2024 – April 2025
-                            </div>
-                            <ul class="list-group list-group-flush">
-                                <li class="list-group-item">Merekap seluruh link media PLN se-Sumbar: TV Local, YouTube,
-                                    TVRI, hingga berita daerah</li>
-                                <li class="list-group-item">Mengelola data dalam jumlah besar untuk dokumentasi media
-                                </li>
-                                <li class="list-group-item">Membuat program otomatisasi rekap data dengan Python untuk
-                                    mempercepat dan mempermudah kerja</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="card text-start col-12 mb-3" data-aos="fade-up" data-aos-duration="1500">
-                        <div class="card-body">
-                            <div class="card-header">
-                                Intern – PT PLN (Persero) (Komunikasi & TJSL) | Padang, Agustus 2024 – September 2025
-                            </div>
-                            <ul class="list-group list-group-flush">
-                                <li class="list-group-item">Bertugas dalam dokumentasi foto, video, dan editing konten
-                                </li>
-                                <li class="list-group-item">Membantu pembuatan materi publikasi serta mengelola data
-                                    laporan kegiatan perusahaan</li>
-                                <li class="list-group-item">Support tim TJSL dalam pelaksanaan program sosial dan
-                                    komunikasi</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="card text-start col-12 mb-3" data-aos="fade-up" data-aos-duration="1500">
-                        <div class="card-body">
-                            <div class="card-header">
-                                Web Developer (Projek Akhir) – SMKN 4 Payakumbuh | Januari – Maret 2025
-                            </div>
-                            <ul class="list-group list-group-flush">
-                                <li class="list-group-item">Mengembangkan aplikasi Sistem Penunjang Keputusan Penentuan
-                                    Jurusan Kuliah berbasis web</li>
-                                <li class="list-group-item">Implementasi metode SAW (Simple Additive Weighting) untuk
-                                    membantu siswa RPL memilih jurusan kuliah berdasarkan nilai kompetensi</li>
-                                <li class="list-group-item">Merancang, coding, dan sosialisasi aplikasi kepada siswa
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="card text-start col-12 mb-3" data-aos="fade-up" data-aos-duration="1500">
-                        <div class="card-body">
-                            <div class="card-header">
-                                Intern – Kelurahan Alai Parak Kopi | Februari – April 2024
-                            </div>
-                            <ul class="list-group list-group-flush">
-                                <li class="list-group-item">Membuat aplikasi sistem penunjang keputusan penerima bansos
-                                    berbasis web</li>
-                                <li class="list-group-item">Implementasi metode AHP untuk proses seleksi bansos,
-                                    pengumpulan dan pengolahan data</li>
-                                <li class="list-group-item">Pendampingan implementasi sistem ke pengguna</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="card text-start col-12 mb-3" data-aos="fade-up" data-aos-duration="1500">
-                        <div class="card-body">
-                            <div class="card-header">
-                                Intern (Backend Engineer) – PT Folarium Innotek Indonesia | Yogyakarta, Januari 2020 –
-                                April 2020
-                            </div>
-                            <ul class="list-group list-group-flush">
-                                <li class="list-group-item">Pengembangan Website ERP: backend & frontend menggunakan
-                                    CodeIgniter dan Bootstrap</li>
-                                <li class="list-group-item">Koordinasi tugas menggunakan Trello dan Bitbucket</li>
-                                <li class="list-group-item">Debugging, perbaikan UI & fitur, komunikasi intens dengan
-                                    tim developer</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="card text-start col-12 mb-3" data-aos="fade-up" data-aos-duration="1500">
-                        <div class="card-body">
-                            <div class="card-header">
-                                IT Support – SDN 06 Taeh Baruah
-                            </div>
-                            <ul class="list-group list-group-flush">
-                                <li class="list-group-item">Support instalasi perangkat pembelajaran (proyektor, materi
-                                    PPT, dokumentasi)</li>
-                                <li class="list-group-item">Membantu proses dan dokumen akreditasi sekolah</li>
-                                <li class="list-group-item">Administrasi data IT sekolah dan troubleshooting perangkat
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-
+            <div class="glass">
+              <small>GitHub</small><b>github.com/naufalhafid</b>
             </div>
-            <div class="circle2" data-aos="zoom-in" data-aos-duration="1500"></div>
+          </div>
         </div>
-    </section>
+      </section>
 
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-        <path fill="#1C1C1C" fill-opacity="1"
-            d="M0,32L26.7,26.7C53.3,21,107,11,160,58.7C213.3,107,267,213,320,256C373.3,299,427,277,480,229.3C533.3,181,587,107,640,101.3C693.3,96,747,160,800,192C853.3,224,907,224,960,213.3C1013.3,203,1067,181,1120,149.3C1173.3,117,1227,75,1280,74.7C1333.3,75,1387,117,1413,138.7L1440,160L1440,320L1413.3,320C1386.7,320,1333,320,1280,320C1226.7,320,1173,320,1120,320C1066.7,320,1013,320,960,320C906.7,320,853,320,800,320C746.7,320,693,320,640,320C586.7,320,533,320,480,320C426.7,320,373,320,320,320C266.7,320,213,320,160,320C106.7,320,53,320,27,320L0,320Z">
-        </path>
-    </svg>
-
-    <!-- Gallery -->
-    <section id="gallery" class="gallery">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-md-12 col-10 text-center pt-2 ">
-                    <h2 data-aos="fade-down" data-aos-duration="1500">GALLERY</h2>
-                    <hr class="hr">
-                    <p class="description" data-aos="fade-up" data-aos-duration="1500">FOTO KENANGAN SEMASA HIDUP</p>
-                </div>
+      <section class="sec" id="skills">
+        <div class="wrap">
+          <div data-aos="fade-up">
+            <div class="label">02 — Skills</div>
+            <h2>Tools I work with.</h2>
+            <p class="lead">
+              Kombinasi kemampuan administrasi, data, digital content, dan
+              project management.
+            </p>
+          </div>
+          <div class="skills">
+            <div class="skill glass" data-aos="fade-up">
+              <h3>Data & Administration</h3>
+              <div class="tags">
+                <span class="tag">Excel</span><span class="tag">Word</span
+                ><span class="tag">Access</span
+                ><span class="tag">Data Management</span
+                ><span class="tag">Reporting</span>
+              </div>
             </div>
-
-            <div class="row row-cols-lg-3 row-cols-md-3 row-cols-sm-2 row-cols-1 justify-content-center">
-                <div class="col mt-3">
-                    <img src="img/thumbnail/1.jpg" alt="" class="" data-aos="flip-right" data-aos-duration="1000">
-                </div>
-                <div class="col mt-3">
-                    <img src="img/thumbnail/2.jpg" alt="" class="" data-aos="flip-right" data-aos-duration="1000">
-                </div>
-                <div class="col mt-3">
-                    <img src="img/thumbnail/3.jpg" alt="" class="" data-aos="flip-right" data-aos-duration="1000">
-                </div>
-                <div class="col mt-3">
-                    <img src="img/thumbnail/4.jpg" alt="" class="" data-aos="flip-right" data-aos-duration="1000">
-                </div>
-                <!-- <div class="col mt-3">
-                    <img src="img/thumbnail/5.jpg" alt="" class="" data-aos="flip-right" data-aos-duration="1000">
-                </div> -->
-                <div class="col mt-3">
-                    <img src="img/thumbnail/6.jpg" alt="" class="" data-aos="flip-right" data-aos-duration="1000">
-                </div>
-                <div class="col mt-3">
-                    <img src="img/thumbnail/7.jpg" alt="" class="" data-aos="flip-right" data-aos-duration="1000">
-                </div>
-                <div class="col mt-3">
-                    <img src="img/thumbnail/8.jpg" alt="" class="" data-aos="flip-right" data-aos-duration="1000">
-                </div>
-                <div class="col mt-3">
-                    <img src="img/thumbnail/9.jpg" alt="" class="" data-aos="flip-right" data-aos-duration="1000">
-                </div>
-
+            <div class="skill glass" data-aos="fade-up" data-aos-delay="100">
+              <h3>Digital & Content</h3>
+              <div class="tags">
+                <span class="tag">Canva</span><span class="tag">CapCut</span
+                ><span class="tag">Instagram</span
+                ><span class="tag">TikTok</span><span class="tag">YouTube</span>
+              </div>
             </div>
+            <div class="skill glass" data-aos="fade-up" data-aos-delay="200">
+              <h3>Technology & Tools</h3>
+              <div class="tags">
+                <span class="tag">MySQL</span><span class="tag">Python</span
+                ><span class="tag">Visio</span><span class="tag">Notion</span
+                ><span class="tag">Trello</span
+                ><span class="tag">AI Tools</span>
+              </div>
+            </div>
+          </div>
         </div>
-    </section>
+      </section>
 
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-        <path fill="#1C1C1C" fill-opacity="1"
-            d="M0,32L20,58.7C40,85,80,139,120,165.3C160,192,200,192,240,170.7C280,149,320,107,360,74.7C400,43,440,21,480,32C520,43,560,85,600,112C640,139,680,149,720,128C760,107,800,53,840,64C880,75,920,149,960,176C1000,203,1040,181,1080,144C1120,107,1160,53,1200,53.3C1240,53,1280,107,1320,122.7C1360,139,1400,117,1420,106.7L1440,96L1440,0L1420,0C1400,0,1360,0,1320,0C1280,0,1240,0,1200,0C1160,0,1120,0,1080,0C1040,0,1000,0,960,0C920,0,880,0,840,0C800,0,760,0,720,0C680,0,640,0,600,0C560,0,520,0,480,0C440,0,400,0,360,0C320,0,280,0,240,0C200,0,160,0,120,0C80,0,40,0,20,0L0,0Z">
-        </path>
-    </svg>
-
-    <!-- Projetcs -->
-    <section id="projects" class="projects">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-md-12 col-10 text-center pt-2 ">
-                    <h2 data-aos="fade-down" data-aos-duration="1500">PROJETCS</h2>
-                    <hr class="hr">
-                    <p class="description" data-aos="fade-up" data-aos-duration="1500">BEBERAPA PROJECT YANG SUDAH
-                        DIBUAT</p>
-                </div>
-            </div>
-            <div class="row mt-4 justify-content-center" data-aos="fade-up" data-aos-duration="1500">
-                <div class="col-md-5 pt-3" data-aos="fade-up" data-aos-duration="1500">
-                    <div class="card text-start col-12">
-                        <img src="img/project/weding.png" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h4 class="card-title text-center">Wedding
-                                <hr>
-                            </h4>
-                            <div class="list-group">
-                                <a href="https://naufalhafid.github.io/Haci" target="_blank"
-                                    class="list-group-item list-group-item-action web text-center">
-                                    <i class="bi bi-globe2"></i>
-                                    Haci
-                                </a>
-                            </div>
-                            <div class="list-group">
-                                <a href="https://naufalhafid.github.io/MozaTian" target="_blank"
-                                    class="list-group-item list-group-item-action web text-center">
-                                    <i class="bi bi-globe2"></i>
-                                    MozaTian
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
-                <!-- <div class="col-md-5 pt-3">
-                    <div class="card text-start col-12 ">
-                        <img src="img/project/Portofolio.png" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h4 class="card-title text-center">Another
-                                <hr>
-                            </h4>
-                            <div class="list-group">
-                                <a href="https://naufalhafid.github.io/portofolio" target="_blank"
-                                    class="list-group-item list-group-item-action text-center">
-                                    Portofolio     
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div> -->
-                <div class="col-md-5 pt-3" data-aos="fade-up" data-aos-duration="1500">
-                    <div class="card text-start col-12 ">
-                        <img src="img/project/SPK-AHP.png" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h4 class="card-title text-center">Sistem Penunjang Keputusan AHP
-                                <hr>
-                            </h4>
-                            <div class="list-group">
-                                <a href="https://github.com/NaufalHafid/SPK-AHP" target="_blank"
-                                    class="list-group-item list-group-item-action github text-center">
-                                    <i class="bi bi-github"></i>
-                                    Github SPK BANSOS
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-5 pt-3" data-aos="fade-up" data-aos-duration="1500">
-                    <div class="card text-start col-12 ">
-                        <img src="img/project/SPK-SAW.png" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h4 class="card-title text-center">Sistem Penunjnag Keputusan SAW
-                                <hr>
-                            </h4>
-                            <div class="list-group">
-                                <a href="https://github.com/NaufalHafid/SPK-SAW" target="_blank"
-                                    class="list-group-item list-group-item-action github text-center">
-                                    <i class="bi bi-github"></i>
-                                    Github SPK Penentuan Jurusan Kuliah
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-5 pt-3" data-aos="fade-up" data-aos-duration="1500">
-                    <div class="card text-start col-12 ">
-                        <img src="img/project/KASIR.png" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h4 class="card-title text-center">Website Kasir
-                                <hr>
-                            </h4>
-                            <div class="list-group">
-                                <a href="https://github.com/NaufalHafid/KASIR-Bengkel-Motor" target="_blank"
-                                    class="list-group-item list-group-item-action github text-center">
-                                    <i class="bi bi-github"></i>
-                                    Github Website Kasir
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-5 pt-3" data-aos="fade-up" data-aos-duration="1500">
-                    <div class="card text-start col-12 ">
-                        <img src="img/project/warmncozy.png" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h4 class="card-title text-center">Food
-                                <hr>
-                            </h4>
-                            <div class="list-group">
-                                <a href="https://naufalhafid.github.io/warmncozy" target="_blank"
-                                    class="list-group-item list-group-item-action web text-center">
-                                    <i class="bi bi-globe2"></i>
-                                    Warm & Cozy
-                                </a>
-                                <a href="https://instagram.com/warm_ncozy" target="_blank"
-                                    class="list-group-item list-group-item-action instagram text-center">
-                                    <i class="bi bi-instagram"></i>
-                                    Instagram Warm & Cozy
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-5 pt-3" data-aos="fade-up" data-aos-duration="1500">
-                    <div class="card text-start col-12 ">
-                        <img src="img/project/wibutoon.png" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h4 class="card-title text-center">Fan Page Anime
-                                <hr>
-                            </h4>
-                            <div class="list-group">
-                                <a href="https://instagram.com/wibutoon" target="_blank"
-                                    class="list-group-item list-group-item-action instagram text-center">
-                                    <i class="bi bi-instagram"></i>
-                                    Wibotoon
-                                </a>
-                                <a href="https://www.tiktok.com/@wibutoon" target="_blank"
-                                    class="list-group-item list-group-item-action tiktok text-center">
-                                    <i class="bi bi-tiktok"></i>
-                                    Wibotoon
-                                </a>
-                                <a href="https://discord.gg/AJjrW7P" target="_blank"
-                                    class="list-group-item list-group-item-action discord text-center">
-                                    <i class="bi bi-discord"></i>
-                                    Discord
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="circle2" data-aos="zoom-in" data-aos-duration="1500"></div>
+      <section class="sec" id="experience">
+        <div class="wrap">
+          <div data-aos="fade-up">
+            <div class="label">03 — Experience</div>
+            <h2>Where I've worked.</h2>
+          </div>
+          <div class="timeline">
+            <article class="job" data-aos="fade-up">
+              <h3>Admin Data Marketing — Abuds Group</h3>
+              <div class="meta">Payakumbuh · September 2025 — April 2026</div>
+              <ul>
+                <li>Mengelola Instagram, TikTok, YouTube, dan Facebook.</li>
+                <li>Menyusun content planning dan publikasi konten.</li>
+                <li>Koordinasi influencer untuk kebutuhan promosi.</li>
+                <li>
+                  Rekap dan analisis komplain GoFood, GrabFood, dan ShopeeFood.
+                </li>
+                <li>
+                  Laporan performa media sosial dan analisis data penjualan
+                  untuk strategi promo.
+                </li>
+              </ul>
+            </article>
+            <article class="job" data-aos="fade-up">
+              <h3>Data Entry — PT. PLN (Persero), Komunikasi & TJSL</h3>
+              <div class="meta">Padang · Oktober 2024 — April 2025</div>
+              <ul>
+                <li>
+                  Mengelola data program komunikasi dan TJSL untuk rekapan media
+                  PLN UID Sumbar.
+                </li>
+                <li>
+                  Mengelola data dalam jumlah besar untuk integritas dan
+                  kemudahan akses.
+                </li>
+                <li>
+                  Menggunakan Python untuk analisis data, laporan, dan
+                  otomatisasi tugas.
+                </li>
+              </ul>
+            </article>
+            <article class="job" data-aos="fade-up">
+              <h3>Intern — PT. PLN (Persero), Komunikasi & TJSL</h3>
+              <div class="meta">Padang · Agustus 2024 — September 2025</div>
+              <ul>
+                <li>
+                  Mendukung pengelolaan data dan laporan kegiatan program TJSL.
+                </li>
+                <li>
+                  Mengelola data untuk laporan dan dokumentasi perusahaan.
+                </li>
+              </ul>
+            </article>
+            <article class="job" data-aos="fade-up">
+              <h3>Intern — Kelurahan Alai Parak Kopi</h3>
+              <div class="meta">Padang · Februari 2024 — April 2024</div>
+              <ul>
+                <li>Mengumpulkan data untuk SPK penerima bantuan sosial.</li>
+                <li>Merancang sistem web menggunakan metode AHP.</li>
+              </ul>
+            </article>
+            <article class="job" data-aos="fade-up">
+              <h3>
+                Intern (Backend Engineer) — PT. Folarium Innotect Indonesia
+              </h3>
+              <div class="meta">Yogyakarta · Januari 2020 — April 2020</div>
+              <ul>
+                <li>
+                  Mendukung dokumentasi proyek ERP dan koordinasi administrasi
+                  tim.
+                </li>
+                <li>
+                  Menggunakan Trello untuk task tracking dan monitoring
+                  progress.
+                </li>
+                <li>
+                  Menyusun laporan perkembangan proyek untuk Project Manager.
+                </li>
+              </ul>
+            </article>
+          </div>
         </div>
-    </section>
+      </section>
 
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-        <path fill="#1C1C1C" fill-opacity="1"
-            d="M0,256L26.7,224C53.3,192,107,128,160,96C213.3,64,267,64,320,101.3C373.3,139,427,213,480,229.3C533.3,245,587,203,640,165.3C693.3,128,747,96,800,112C853.3,128,907,192,960,218.7C1013.3,245,1067,235,1120,208C1173.3,181,1227,139,1280,128C1333.3,117,1387,139,1413,149.3L1440,160L1440,320L1413.3,320C1386.7,320,1333,320,1280,320C1226.7,320,1173,320,1120,320C1066.7,320,1013,320,960,320C906.7,320,853,320,800,320C746.7,320,693,320,640,320C586.7,320,533,320,480,320C426.7,320,373,320,320,320C266.7,320,213,320,160,320C106.7,320,53,320,27,320L0,320Z">
-        </path>
-    </svg>
-
-    <section id="social" class="social">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-md-12 col-10 text-center pt-2 ">
-                    <h2 data-aos="fade-down" data-aos-duration="1500">SOCIAL</h2>
-                    <hr class="hr">
-                    <p class="description" data-aos="fade-up" data-aos-duration="1500">HUBUNGI SAYA</p>
-                </div>
-            </div>
-            <div class="row  mt-4 justify-content-center">
-                <div class="col-md-5 pt-3">
-                    <div class="card text-start col-12 " data-aos="fade-up" data-aos-duration="1500">
-                        <div class="card-body">
-                            <!-- <h4 class="card-title">Contact
-                                <hr>
-                            </h4> -->
-                            <div class="list-group">
-                                <a href="mailto:naufalhafid46@gmail.com" target="_blank"
-                                    class="list-group-item list-group-item-action email text-center">
-                                    <i class="bi bi-envelope-fill"></i>
-                                    Email
-                                </a>
-                                <a href="https://linkedin.com/in/naufalhafid/" target="_blank"
-                                    class="list-group-item list-group-item-action linkedin text-center">
-                                    <i class="bi bi-linkedin"></i>
-                                    linkedin
-                                </a>
-                                <a href="https://instagram.com/nopaaaaall" target="_blank"
-                                    class="list-group-item list-group-item-action instagram text-center">
-                                    <i class="bi bi-instagram"></i>
-                                    Instagram
-                                </a>
-                                <a href="https://www.tiktok.com/@naufalhafidm" target="_blank"
-                                    class="list-group-item list-group-item-action tiktok text-center">
-                                    <i class="bi bi-tiktok"></i>
-                                    tiktok
-                                </a>
-                                <a href="https://discord.gg/AJjrW7P" target="_blank"
-                                    class="list-group-item list-group-item-action discord text-center">
-                                    <i class="bi bi-discord"></i>
-                                    Discord
-                                </a>
-                                <a href="https://github.com/NaufalHafid" target="_blank"
-                                    class="list-group-item list-group-item-action github text-center">
-                                    <i class="bi bi-github"></i>
-                                    Github
-                                </a>
-                                <a href="https://open.spotify.com/playlist/0HRjlYcjF9B6aU6VhugDtQ?si=_Rhgz3D8R2qWwGTcgCcMpA"
-                                    target="_blank" class="list-group-item list-group-item-action spotify text-center">
-                                    <i class="bi bi-spotify"></i>
-                                    Spotify
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+      <section class="sec" id="projects">
+        <div class="wrap">
+          <div data-aos="fade-up">
+            <div class="label">04 — Projects</div>
+            <h2>Selected projects.</h2>
+            <p class="lead">
+              Project yang relevan dengan latar belakang Sistem Informasi dan
+              pengembangan solusi digital.
+            </p>
+          </div>
+          <div class="projects">
+            <article class="project glass" data-aos="zoom-in">
+              <span class="num">01</span>
+              <h3>SPK Penerima Bantuan Sosial</h3>
+              <p>
+                Sistem pendukung keputusan berbasis web untuk seleksi penerima
+                bantuan sosial menggunakan AHP.
+              </p>
+              <div class="tags">
+                <span class="tag">Web</span><span class="tag">AHP</span
+                ><span class="tag">DSS</span>
+              </div>
+            </article>
+            <article
+              class="project glass"
+              data-aos="zoom-in"
+              data-aos-delay="100"
+            >
+              <span class="num">02</span>
+              <h3>SPK Pemilihan Jurusan</h3>
+              <p>
+                Sistem berbasis web untuk rekomendasi jurusan berdasarkan
+                kompetensi siswa RPL menggunakan SAW.
+              </p>
+              <div class="tags">
+                <span class="tag">Web</span><span class="tag">SAW</span>
+              </div>
+            </article>
+            <article class="project glass" data-aos="zoom-in">
+              <span class="num">03</span>
+              <h3>Website Kasir Bengkel</h3>
+              <p>
+                Aplikasi kasir berbasis web untuk pencatatan transaksi dan
+                pengelolaan data bengkel motor.
+              </p>
+              <div class="tags">
+                <span class="tag">PHP</span><span class="tag">Database</span>
+              </div>
+            </article>
+            <article
+              class="project glass"
+              data-aos="zoom-in"
+              data-aos-delay="100"
+            >
+              <span class="num">04</span>
+              <h3>ERP Project Support</h3>
+              <p>
+                Kontribusi dalam dokumentasi, task tracking, koordinasi, dan
+                laporan proyek ERP.
+              </p>
+              <div class="tags">
+                <span class="tag">ERP</span><span class="tag">Trello</span>
+              </div>
+            </article>
+          </div>
         </div>
-    </section>
+      </section>
 
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-        <path fill="#1C1C1C" fill-opacity="1"
-            d="M0,32L20,58.7C40,85,80,139,120,165.3C160,192,200,192,240,170.7C280,149,320,107,360,74.7C400,43,440,21,480,32C520,43,560,85,600,112C640,139,680,149,720,128C760,107,800,53,840,64C880,75,920,149,960,176C1000,203,1040,181,1080,144C1120,107,1160,53,1200,53.3C1240,53,1280,107,1320,122.7C1360,139,1400,117,1420,106.7L1440,96L1440,0L1420,0C1400,0,1360,0,1320,0C1280,0,1240,0,1200,0C1160,0,1120,0,1080,0C1040,0,1000,0,960,0C920,0,880,0,840,0C800,0,760,0,720,0C680,0,640,0,600,0C560,0,520,0,480,0C440,0,400,0,360,0C320,0,280,0,240,0C200,0,160,0,120,0C80,0,40,0,20,0L0,0Z">
-        </path>
-    </svg>
-
-    <footer class="footer">
-        <div class="container">
-            <div class="circle2" data-aos="zoom-in" data-aos-duration="1500"></div>
-            <div class="row">
-                <div class="col-lg-6 ">
-                    <p class="text-center" data-aos="fade-up" data-aos-duration="1500">Didesign dan dibut menggunakan:
-                        <br>
-                        Bootstrap <br>
-                        Getwave.io <br>
-                        AOS
-                    </p>
-                </div>
-                <div class="col-lg-6">
-                    <p class="text-center" data-aos="fade-up" data-aos-duration="1500">&copy;2025 NaufalHafid. All
-                        Rights Reserved.</p>
-                    <p class="text-center" data-aos="fade-up" data-aos-duration="1500">Dibuat Oleh <a class=""
-                            href="https://github.com/NaufalHafid">Naufal
-                            Hafid</a> </p>
-                </div>
+      <section class="sec" id="gallery">
+        <div class="wrap">
+          <div data-aos="fade-up">
+            <div class="label">05 — Gallery</div>
+            <h2>A little bit of me.</h2>
+            <p class="lead">
+              Gallery personal agar portfolio terasa lebih hidup.
+            </p>
+          </div>
+          <div class="gallery">
+            <div class="photo" data-aos="zoom-in">
+              <img
+                src="assets/gallery/foto-1.jpg"
+                alt="Foto Naufal 1"
+                loading="lazy"
+              />
             </div>
-
+            <div class="photo" data-aos="zoom-in">
+              <img
+                src="assets/gallery/foto-2.jpg"
+                alt="Foto Naufal 2"
+                loading="lazy"
+              />
+            </div>
+            <div class="photo" data-aos="zoom-in">
+              <img
+                src="assets/gallery/foto-3.jpg"
+                alt="Foto Naufal 3"
+                loading="lazy"
+              />
+            </div>
+            <div class="photo" data-aos="zoom-in">
+              <img
+                src="assets/gallery/foto-4.jpg"
+                alt="Foto Naufal 4"
+                loading="lazy"
+              />
+            </div>
+            <div class="photo" data-aos="zoom-in">
+              <img
+                src="assets/gallery/foto-5.jpg"
+                alt="Foto Naufal 5"
+                loading="lazy"
+              />
+            </div>
+            <div class="photo" data-aos="zoom-in">
+              <img
+                src="assets/gallery/foto-6.jpg"
+                alt="Foto Naufal 6"
+                loading="lazy"
+              />
+            </div>
+          </div>
+          <p class="note">
+            Masukkan foto kamu ke <b>assets/gallery/</b> dengan nama foto-1.jpg
+            sampai foto-6.jpg.
+          </p>
         </div>
+      </section>
+
+      <section class="sec" id="education">
+        <div class="wrap" data-aos="fade-up">
+          <div class="label">06 — Education</div>
+          <h2>Education.</h2>
+          <div class="edu glass">
+            <h3>S1 Sistem Informasi</h3>
+            <p>Universitas Putra Indonesia (YPTK) Padang</p>
+            <p><strong>September 2021 — Mei 2025</strong></p>
+            <p>IPK: 3.68 / 4.00 (Cumlaude)</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="sec" id="contact">
+        <div class="wrap">
+          <div class="contact glass" data-aos="zoom-in">
+            <div class="label">07 — Contact</div>
+            <h2>Let's build something useful.</h2>
+            <p>
+              Terbuka untuk peluang kerja, kolaborasi project, dan kesempatan
+              berkembang di bidang data, digital, maupun teknologi.
+            </p>
+            <div class="contact-links">
+              <a
+                class="btn primary"
+                href="mailto:naufalhafidmardhatillah@gmail.com"
+                >Email Me</a
+              ><a
+                class="btn secondary"
+                href="https://linkedin.com/in/naufalhafid"
+                target="_blank"
+                >LinkedIn</a
+              ><a
+                class="btn secondary"
+                href="https://github.com/naufalhafid"
+                target="_blank"
+                >GitHub</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="wrap">
+        © 2026 Naufal Hafid Mardhatillah · Built with HTML, CSS & JavaScript.
+      </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous">
-        </script>
+    <div class="lightbox" id="lightbox">
+      <button class="close" id="close">×</button
+      ><img id="preview" alt="Preview foto" />
+    </div>
 
-    <!-- AOS -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
     <script>
-        AOS.init();
+      AOS.init({
+        duration: 750,
+        easing: "ease-out-cubic",
+        once: true,
+        offset: 70,
+      });
+      const root = document.documentElement,
+        theme = document.getElementById("theme");
+      const saved = localStorage.getItem("naufal-theme");
+      if (saved) root.dataset.theme = saved;
+      function icon() {
+        theme.textContent = root.dataset.theme === "dark" ? "☀" : "☾";
+      }
+      icon();
+      theme.onclick = () => {
+        root.dataset.theme = root.dataset.theme === "dark" ? "light" : "dark";
+        localStorage.setItem("naufal-theme", root.dataset.theme);
+        icon();
+      };
+      const menu = document.getElementById("menu"),
+        nav = document.getElementById("nav");
+      menu.onclick = () => nav.classList.toggle("open");
+      document
+        .querySelectorAll(".nav a")
+        .forEach((a) => (a.onclick = () => nav.classList.remove("open")));
+      const hero = document.querySelector(".hero>div");
+      addEventListener(
+        "scroll",
+        () => {
+          let y = scrollY;
+          if (y < innerHeight) {
+            hero.style.transform = `translateY(${y * 0.12}px)`;
+            hero.style.opacity = Math.max(0.25, 1 - y / 650);
+          }
+        },
+        { passive: true },
+      );
+
+      const canvas = document.getElementById("particles"),
+        ctx = canvas.getContext("2d");
+      let ps = [],
+        mouse = { x: -9999, y: -9999 };
+      function resize() {
+        let d = Math.min(devicePixelRatio || 1, 2);
+        canvas.width = innerWidth * d;
+        canvas.height = innerHeight * d;
+        ctx.setTransform(d, 0, 0, d, 0, 0);
+      }
+      function make() {
+        ps = Array.from(
+          { length: Math.min(80, Math.floor(innerWidth / 16)) },
+          () => ({
+            x: Math.random() * innerWidth,
+            y: Math.random() * innerHeight,
+            vx: (Math.random() - 0.5) * 0.18,
+            vy: (Math.random() - 0.5) * 0.18,
+            r: Math.random() * 1.4 + 0.5,
+          }),
+        );
+      }
+      function draw() {
+        ctx.clearRect(0, 0, innerWidth, innerHeight);
+        let light = root.dataset.theme === "light",
+          dot = light ? "rgba(109,61,245,.32)" : "rgba(167,139,250,.48)",
+          line = light ? "rgba(109,61,245,.06)" : "rgba(167,139,250,.10)";
+        ps.forEach((p) => {
+          p.x += p.vx;
+          p.y += p.vy;
+          if (p.x < 0) p.x = innerWidth;
+          if (p.x > innerWidth) p.x = 0;
+          if (p.y < 0) p.y = innerHeight;
+          if (p.y > innerHeight) p.y = 0;
+          ctx.beginPath();
+          ctx.arc(p.x, p.y, p.r, 0, 7);
+          ctx.fillStyle = dot;
+          ctx.fill();
+        });
+        for (let i = 0; i < ps.length; i++)
+          for (let j = i + 1; j < ps.length; j++) {
+            let d = Math.hypot(ps[i].x - ps[j].x, ps[i].y - ps[j].y);
+            if (d < 105) {
+              ctx.beginPath();
+              ctx.moveTo(ps[i].x, ps[i].y);
+              ctx.lineTo(ps[j].x, ps[j].y);
+              ctx.strokeStyle = line;
+              ctx.stroke();
+            }
+          }
+        requestAnimationFrame(draw);
+      }
+      addEventListener("resize", () => {
+        resize();
+        make();
+      });
+      resize();
+      make();
+      draw();
+
+      const box = document.getElementById("lightbox"),
+        preview = document.getElementById("preview"),
+        close = document.getElementById("close");
+      document.querySelectorAll(".photo img").forEach(
+        (img) =>
+          (img.onclick = () => {
+            preview.src = img.src;
+            preview.alt = img.alt;
+            box.classList.add("open");
+            document.body.style.overflow = "hidden";
+          }),
+      );
+      function shut() {
+        box.classList.remove("open");
+        document.body.style.overflow = "";
+      }
+      close.onclick = shut;
+      box.onclick = (e) => {
+        if (e.target === box) shut();
+      };
+      document.onkeydown = (e) => {
+        if (e.key === "Escape") shut();
+      };
     </script>
-
-    <!-- dark mode 1 -->
-    <!-- <script>
-        const toggleSwitch = document.getElementById('dark-mode-toggle');
-        const body = document.body;
-
-        // Memeriksa apakah user sebelumnya memilih dark mode
-        if (localStorage.getItem('dark-mode') === 'enabled') {
-            body.classList.add('dark-mode');
-            toggleSwitch.checked = true;
-        }
-
-        // Menangani perubahan status checkbox
-        toggleSwitch.addEventListener('change', function () {
-            if (this.checked) {
-                body.classList.add('dark-mode');
-                localStorage.setItem('dark-mode', 'enabled');
-            } else {
-                body.classList.remove('dark-mode');
-                localStorage.setItem('dark-mode', 'disabled');
-            }
-        });
-    </script> -->
-    <!-- dark mode 2 -->
-    <!-- <script>
-        const chk = document.getElementById('chk');
-
-        chk.addEventListener('change', () => {
-            document.body.classList.toggle('dark');
-        });
-
-        // SOCIAL PANEL JS
-        const floating_btn = document.querySelector('.floating-btn');
-        const close_btn = document.querySelector('.close-btn');
-        const social_panel_container = document.querySelector('.social-panel-container');
-
-        floating_btn.addEventListener('click', () => {
-            social_panel_container.classList.toggle('visible')
-        });
-
-        close_btn.addEventListener('click', () => {
-            social_panel_container.classList.remove('visible')
-        });
-    </script> -->
-
-    <script>
-        const chk = document.getElementById('chk');
-        const STORAGE_KEY = 'darkModeEnabled';
-
-        // 1. Fungsi untuk menerapkan tema
-        function applyTheme(isDark) {
-            if (isDark) {
-                document.body.classList.add('dark');
-                chk.checked = true; // Pastikan checkbox tercentang
-            } else {
-                document.body.classList.remove('dark');
-                chk.checked = false; // Pastikan checkbox tidak tercentang
-            }
-        }
-
-        // 2. Mendeteksi Tema Awal: Prioritas LocalStorage > Preferensi Sistem
-        function initializeTheme() {
-            const storedPreference = localStorage.getItem(STORAGE_KEY);
-            let isDark = false;
-
-            if (storedPreference !== null) {
-                // Jika ada di LocalStorage, gunakan itu
-                isDark = storedPreference === 'true';
-            } else {
-                // Jika tidak ada di LocalStorage, cek preferensi sistem
-                isDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-            }
-
-            applyTheme(isDark);
-        }
-
-        // 3. Menangani Perubahan: Simpan ke LocalStorage dan terapkan
-        chk.addEventListener('change', () => {
-            const isDark = chk.checked;
-            applyTheme(isDark);
-            // Simpan pilihan ke LocalStorage agar tema tetap
-            localStorage.setItem(STORAGE_KEY, isDark);
-        });
-
-        // Panggil fungsi inisialisasi saat script dimuat
-        initializeTheme();
-
-        // Opsional: Dengarkan perubahan preferensi sistem secara real-time
-        window.matchMedia('(prefers-color-scheme: dark)').addListener(e => {
-            // Hanya ubah jika pengguna belum menentukan pilihan di LocalStorage (pilihan 'auto')
-            // Namun, karena kita selalu menyimpan ke LocalStorage, ini mungkin tidak diperlukan
-            // jika Anda ingin LocalStorage menjadi prioritas utama.
-            if (localStorage.getItem(STORAGE_KEY) === null) {
-                applyTheme(e.matches);
-            }
-        });
-
-        // --- Kode SOCIAL PANEL Anda yang Tidak Diubah ---
-        const floating_btn = document.querySelector('.floating-btn');
-        const close_btn = document.querySelector('.close-btn');
-        const social_panel_container = document.querySelector('.social-panel-container');
-
-        if (floating_btn && social_panel_container && close_btn) {
-            floating_btn.addEventListener('click', () => {
-                social_panel_container.classList.toggle('visible')
-            });
-
-            close_btn.addEventListener('click', () => {
-                social_panel_container.classList.remove('visible')
-            });
-        }
-        // -----------------------------------------------
-
-    </script>
-</body>
-
+  </body>
 </html>
